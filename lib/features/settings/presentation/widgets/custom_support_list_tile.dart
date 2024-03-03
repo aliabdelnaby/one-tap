@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:via_whatsapp/core/utils/app_colors.dart';
 import 'package:via_whatsapp/core/utils/app_text_styles.dart';
-import 'package:via_whatsapp/features/settings/presentation/settings_cubit/settings_cubit.dart';
+import 'package:via_whatsapp/features/settings/settings_cubit/settings_cubit.dart';
 
 class CustomSupportListTile extends StatelessWidget {
   const CustomSupportListTile({

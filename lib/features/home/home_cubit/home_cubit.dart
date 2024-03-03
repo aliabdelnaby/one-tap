@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:via_whatsapp/core/functions/custom_toast.dart';
-import 'package:via_whatsapp/features/home/presentation/home_cubit/home_state.dart';
+import 'package:via_whatsapp/features/home/home_cubit/home_state.dart';
 
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());

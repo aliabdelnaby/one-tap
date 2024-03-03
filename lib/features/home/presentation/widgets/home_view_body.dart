@@ -2,8 +2,8 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:via_whatsapp/core/utils/app_text_styles.dart';
-import 'package:via_whatsapp/features/home/presentation/home_cubit/home_cubit.dart';
-import 'package:via_whatsapp/features/home/presentation/home_cubit/home_state.dart';
+import 'package:via_whatsapp/features/home/home_cubit/home_cubit.dart';
+import 'package:via_whatsapp/features/home/home_cubit/home_state.dart';
 import 'package:via_whatsapp/features/home/presentation/widgets/custom_btn.dart';
 import 'package:via_whatsapp/features/home/presentation/widgets/custom_text_field.dart';
 
