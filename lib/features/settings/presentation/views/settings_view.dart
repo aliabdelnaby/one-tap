@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:via_whatsapp/core/functions/navigation.dart';
-import 'package:via_whatsapp/features/settings/presentation/views/settings_view_body.dart';
+import 'package:via_whatsapp/features/settings/presentation/widgets/settings_view_body.dart';
 
 class SettingsView extends StatelessWidget {
   const SettingsView({super.key});
@@ -30,7 +30,7 @@ class SettingsView extends StatelessWidget {
         icon: const Icon(
           Icons.close,
           color: Colors.red,
-          size: 30,
+          size: 24,
         ),
       ),
     );
