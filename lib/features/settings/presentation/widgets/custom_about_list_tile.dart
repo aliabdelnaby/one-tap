@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:via_whatsapp/core/utils/app_colors.dart';
 import 'package:via_whatsapp/core/utils/app_text_styles.dart';
@@ -19,7 +20,7 @@ class CustomAboutListTile extends StatelessWidget {
         ),
       ),
       title: Text(
-        "About",
+        "About".tr(),
         style: CustomTextStyle.signikastyle18,
       ),
       trailing:  Icon(

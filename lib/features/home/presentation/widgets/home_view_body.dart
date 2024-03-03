@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:via_whatsapp/core/utils/app_text_styles.dart';
@@ -25,12 +26,12 @@ class HomeViewBody extends StatelessWidget {
                 child: Column(
                   children: [
                     Text(
-                      "Enter Mobile Number",
+                      "title".tr(),
                       style: CustomTextStyle.signikastyle24,
                     ),
                     const SizedBox(height: 5),
                     Text(
-                      "To start a WhatsApp conversation without saving the number to contacts",
+                      "subTitle".tr(),
                       textAlign: TextAlign.center,
                       style: CustomTextStyle.signikastyle15,
                     ),
@@ -51,7 +52,7 @@ class HomeViewBody extends StatelessWidget {
                           );
                         }
                       },
-                      text: "Open In WhatsApp",
+                      text: "Open In WhatsApp".tr(),
                     ),
                   ],
                 ),

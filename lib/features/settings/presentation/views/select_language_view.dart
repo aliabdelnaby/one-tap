@@ -1,4 +1,7 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:via_whatsapp/core/functions/localization.dart';
+import 'package:via_whatsapp/core/functions/navigation.dart';
 import 'package:via_whatsapp/core/utils/app_colors.dart';
 import 'package:via_whatsapp/core/utils/app_text_styles.dart';
 import 'package:via_whatsapp/features/home/presentation/widgets/custom_btn.dart';
@@ -16,7 +19,7 @@ class SelectLanguageView extends StatelessWidget {
             children: [
               const SizedBox(height: 25),
               Text(
-                "Choose Language",
+                "Choose Language".tr(),
                 style: CustomTextStyle.signikastyle24.copyWith(
                   color: AppColors.black,
                 ),
@@ -26,12 +29,18 @@ class SelectLanguageView extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   CustomBtn(
-                    onPressed: () {},
-                    text: "Arabic",
+                    onPressed: () {
+                      LocalizationChecker.changeLanguageToArabic(context);
+                      customReplacementNavigate(context, "/");
+                    },
+                    text: "Arabic".tr(),
                   ),
                   CustomBtn(
-                    onPressed: () {},
-                    text: "English",
+                    onPressed: () {
+                      LocalizationChecker.changeLanguageToEnglish(context);
+                      customReplacementNavigate(context, "/");
+                    },
+                    text: "English".tr(),
                   ),
                 ],
               ),

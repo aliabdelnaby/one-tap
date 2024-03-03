@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:via_whatsapp/core/functions/navigation.dart';
 import 'package:via_whatsapp/core/utils/app_colors.dart';
@@ -18,7 +19,7 @@ class SettingsView extends StatelessWidget {
   AppBar _buildAppBar(BuildContext context) {
     return AppBar(
       title: Text(
-        "One Tap WhatsApp",
+        "appName".tr(),
         style: CustomTextStyle.signikastyle20,
       ),
       centerTitle: true,

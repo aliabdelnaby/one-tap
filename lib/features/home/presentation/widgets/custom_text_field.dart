@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:via_whatsapp/core/utils/app_colors.dart';
 import 'package:via_whatsapp/core/utils/app_text_styles.dart';
@@ -18,7 +19,7 @@ class CustomTextFormField extends StatelessWidget {
         cursorColor: AppColors.black,
         validator: (value) {
           if (value!.isEmpty) {
-            return "This field is required";
+            return "This field is required".tr();
           } else {
             return null;
           }
@@ -32,7 +33,7 @@ class CustomTextFormField extends StatelessWidget {
           focusedBorder: UnderlineInputBorder(
             borderSide: BorderSide(color: AppColors.primaryColor),
           ),
-          hintText: 'Ex: +20 1234567890',
+          hintText: '${"Ex:".tr()} +201234567890',
           hintStyle: CustomTextStyle.signikaTextFieldstyle,
         ),
       ),

@@ -1,3 +1,15 @@
 {
-    "appName": "OneTap WhatsApp"
+    "appName": "OneTap WhatsApp",
+    "title": "Enter Mobile Number",
+    "This field is required": "This field is required",
+    "Ex:": "Ex:",
+    "subTitle": "To start a WhatsApp conversation without saving the number to contacts",
+    "Open In WhatsApp": "Open In WhatsApp",
+    "Choose Language": "Choose Language",
+    "Arabic": "Arabic",
+    "English": "English",
+    "Language": "Language",
+    "Support": "Support",
+    "About": "About",
+    "You are on the same language": "You are on the same language"
 }

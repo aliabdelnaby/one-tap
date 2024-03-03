@@ -1,3 +1,15 @@
 {
-    "appName": "OneTap WhatsApp"
+    "appName": "OneTap WhatsApp",
+    "title": "أدخل رقم الهاتف المحمول",
+    "This field is required": "هذا الحقل مطلوب",
+    "Ex:": "مثال:",
+    "subTitle": "لبدء محادثة واتساب دون حفظ رقم الهاتف في جهات الاتصال",
+    "Open In WhatsApp": "افتح في واتساب",
+    "Choose Language": "اختر اللغة",
+    "Arabic": "العربية",
+    "English": "الإنجليزية",
+    "Language": "اللغة",
+    "Support": "الدعم",
+    "About": "حول",
+    "You are on the same language": "أنت على نفس اللغة"
 }
