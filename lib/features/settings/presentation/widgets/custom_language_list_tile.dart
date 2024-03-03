@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:via_whatsapp/core/functions/navigation.dart';
 import 'package:via_whatsapp/core/utils/app_colors.dart';
 import 'package:via_whatsapp/core/utils/app_text_styles.dart';
 
@@ -10,10 +11,12 @@ class CustomLanguageListTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      onTap: () {},
+      onTap: () {
+        customNavigate(context, "/selectLanguageView");
+      },
       leading: CircleAvatar(
         backgroundColor: AppColors.gray200,
-        child:  Icon(
+        child: Icon(
           Icons.language,
           color: AppColors.primaryColor,
         ),
@@ -22,7 +25,7 @@ class CustomLanguageListTile extends StatelessWidget {
         "Language",
         style: CustomTextStyle.signikastyle18,
       ),
-      trailing:  Icon(
+      trailing: Icon(
         Icons.arrow_forward_ios_rounded,
         color: AppColors.primaryColor,
         size: 20,
