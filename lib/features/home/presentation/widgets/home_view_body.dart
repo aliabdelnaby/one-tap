@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:via_whatsapp/core/utils/app_text_styles.dart';
 import 'package:via_whatsapp/features/home/presentation/home_cubit/home_cubit.dart';
 import 'package:via_whatsapp/features/home/presentation/home_cubit/home_state.dart';
 import 'package:via_whatsapp/features/home/presentation/widgets/custom_btn.dart';
@@ -23,23 +24,17 @@ class HomeViewBody extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 16.0),
                 child: Column(
                   children: [
-                    const Text(
+                    Text(
                       "Enter Mobile Number",
-                      style: TextStyle(
-                        fontSize: 24,
-                        // color: Colors.red,
-                      ),
+                      style: CustomTextStyle.signikastyle24,
                     ),
                     const SizedBox(height: 5),
-                    const Text(
+                    Text(
                       "To start a WhatsApp conversation without saving the number to contacts",
                       textAlign: TextAlign.center,
-                      style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.red,
-                      ),
+                      style: CustomTextStyle.signikastyle15,
                     ),
-                    //   const SizedBox(height: 5),
+                    const SizedBox(height: 5),
                     Padding(
                       padding: const EdgeInsets.symmetric(horizontal: 50),
                       child: CustomTextFormField(

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:via_whatsapp/core/utils/app_colors.dart';
+import 'package:via_whatsapp/core/utils/app_text_styles.dart';
 
 class CustomBtn extends StatelessWidget {
   const CustomBtn({
@@ -22,16 +24,14 @@ class CustomBtn extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: color ?? Colors.red,
+          backgroundColor: color ?? AppColors.primaryColor,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(5),
           ),
         ),
         child: Text(
           text,
-          style: const TextStyle(
-            color: Colors.white,
-          ),
+          style: CustomTextStyle.signikaBtnstyle16,
         ),
       ),
     );

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:via_whatsapp/core/functions/navigation.dart';
+import 'package:via_whatsapp/core/utils/app_colors.dart';
+import 'package:via_whatsapp/core/utils/app_text_styles.dart';
 import 'package:via_whatsapp/features/settings/presentation/widgets/settings_view_body.dart';
 
 class SettingsView extends StatelessWidget {
@@ -15,21 +17,18 @@ class SettingsView extends StatelessWidget {
 
   AppBar _buildAppBar(BuildContext context) {
     return AppBar(
-      title: const Text(
+      title: Text(
         "One Tap WhatsApp",
-        style: TextStyle(
-          fontSize: 20,
-          color: Colors.red,
-        ),
+        style: CustomTextStyle.signikastyle20,
       ),
       centerTitle: true,
       leading: IconButton(
         onPressed: () {
           customPopNavigate(context);
         },
-        icon: const Icon(
+        icon: Icon(
           Icons.close,
-          color: Colors.red,
+          color: AppColors.primaryColor,
           size: 24,
         ),
       ),

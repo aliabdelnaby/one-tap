@@ -1,5 +1,6 @@
-
 import 'package:flutter/material.dart';
+import 'package:via_whatsapp/core/utils/app_colors.dart';
+import 'package:via_whatsapp/core/utils/app_text_styles.dart';
 
 class CustomAboutListTile extends StatelessWidget {
   const CustomAboutListTile({
@@ -11,21 +12,19 @@ class CustomAboutListTile extends StatelessWidget {
     return ListTile(
       onTap: () {},
       leading: CircleAvatar(
-        backgroundColor: Colors.grey[200],
-        child: const Icon(
+        backgroundColor: AppColors.gray200,
+        child:  Icon(
           Icons.info_outline,
-          color: Colors.red,
+          color:  AppColors.primaryColor,
         ),
       ),
-      title: const Text(
+      title: Text(
         "About",
-        style: TextStyle(
-          color: Colors.red,
-        ),
+        style: CustomTextStyle.signikastyle18,
       ),
-      trailing: const Icon(
+      trailing:  Icon(
         Icons.arrow_forward_ios_rounded,
-        color: Colors.red,
+        color:  AppColors.primaryColor,
         size: 20,
       ),
     );
