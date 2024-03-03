@@ -39,7 +39,7 @@ class HomeViewBody extends StatelessWidget {
                     ),
                   ),
                 ),
-                const SizedBox(height: 10),
+                const SizedBox(height: 5),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 50),
                   child: CustomTextFormField(

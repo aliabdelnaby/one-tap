@@ -22,7 +22,7 @@ class CustomBtn extends StatelessWidget {
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: color ?? Colors.white,
+          backgroundColor: color ?? const Color.fromARGB(255, 255, 248, 248),
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(5),
           ),
@@ -30,7 +30,7 @@ class CustomBtn extends StatelessWidget {
         child: Text(
           text,
           style: const TextStyle(
-            color: Colors.black,
+            color: Colors.red,
           ),
         ),
       ),
