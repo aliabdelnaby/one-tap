@@ -13,7 +13,7 @@ class CustomTextFormField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 20),
       child: TextFormField(
-        cursorColor: Colors.deepPurple,
+        cursorColor: Colors.black,
         validator: (value) {
           if (value!.isEmpty) {
             return "This field is required";
@@ -24,7 +24,16 @@ class CustomTextFormField extends StatelessWidget {
         controller: controller,
         keyboardType: TextInputType.number,
         decoration: const InputDecoration(
+          enabledBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.red),
+          ),
+          focusedBorder: UnderlineInputBorder(
+            borderSide: BorderSide(color: Colors.red),
+          ),
           hintText: 'Ex: +20 1234567890',
+          hintStyle: TextStyle(
+            color: Colors.grey,
+          ),
         ),
       ),
     );

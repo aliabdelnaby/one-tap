@@ -15,51 +15,53 @@ class HomeViewBody extends StatelessWidget {
       builder: (context, state) {
         final cubit = context.read<HomeCubit>();
         TextEditingController phoneController = TextEditingController();
-        return Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Form(
-            key: cubit.phoneFormKey,
-            child: Column(
-              children: [
-                const Align(
-                  child: Text(
-                    "Enter Mobile Number",
-                    style: TextStyle(
-                      fontSize: 24,
+        return Form(
+          key: cubit.phoneFormKey,
+          child: ListView(
+            children: [
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 16.0),
+                child: Column(
+                  children: [
+                    const Text(
+                      "Enter Mobile Number",
+                      style: TextStyle(
+                        fontSize: 24,
+                        // color: Colors.red,
+                      ),
                     ),
-                  ),
-                ),
-                const SizedBox(height: 5),
-                const Align(
-                  child: Text(
-                    "To start a WhatsApp Chat without saving the number to contacts",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      fontSize: 15,
+                    const SizedBox(height: 5),
+                    const Text(
+                      "To start a WhatsApp conversation without saving the number to contacts",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 15,
+                        color: Colors.red,
+                      ),
                     ),
-                  ),
+                    //   const SizedBox(height: 5),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 50),
+                      child: CustomTextFormField(
+                        controller: phoneController,
+                      ),
+                    ),
+                    const SizedBox(height: 20),
+                    CustomBtn(
+                      onPressed: () {
+                        if (cubit.phoneFormKey.currentState!.validate()) {
+                          cubit.openWhatsapp(
+                            context: context,
+                            number: phoneController.text,
+                          );
+                        }
+                      },
+                      text: "Open In WhatsApp",
+                    ),
+                  ],
                 ),
-                const SizedBox(height: 5),
-                Padding(
-                  padding: const EdgeInsets.symmetric(horizontal: 50),
-                  child: CustomTextFormField(
-                    controller: phoneController,
-                  ),
-                ),
-                const SizedBox(height: 20),
-                CustomBtn(
-                  onPressed: () {
-                    if (cubit.phoneFormKey.currentState!.validate()) {
-                      cubit.openWhatsapp(
-                        context: context,
-                        number: phoneController.text,
-                      );
-                    }
-                  },
-                  text: "Open In WhatsApp",
-                ),
-              ],
-            ),
+              ),
+            ],
           ),
         );
       },

@@ -17,12 +17,12 @@ class CustomBtn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: MediaQuery.sizeOf(context).height * .07,
-      width: MediaQuery.sizeOf(context).width * .5,
+      height: MediaQuery.sizeOf(context).height * .065,
+      width: MediaQuery.sizeOf(context).width * .45,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(
-          backgroundColor: color ?? const Color.fromARGB(255, 255, 248, 248),
+          backgroundColor: color ?? Colors.red,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(5),
           ),
@@ -30,7 +30,7 @@ class CustomBtn extends StatelessWidget {
         child: Text(
           text,
           style: const TextStyle(
-            color: Colors.red,
+            color: Colors.white,
           ),
         ),
       ),
