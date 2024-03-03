@@ -1,7 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'custom_toast.dart';
+
 import '../utils/app_colors.dart';
+import 'custom_toast.dart';
 
 class LocalizationChecker {
   static changeLanguageToEnglish(BuildContext context) {

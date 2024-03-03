@@ -14,7 +14,7 @@
     </intent>
 </queries>
     <application
-        android:label="One Tap WhatsApp"
+        android:label="One Tap"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+
 import '../../features/home/home_cubit/home_cubit.dart';
 import '../../features/home/presentation/views/home_view.dart';
-import '../../features/settings/settings_cubit/settings_cubit.dart';
 import '../../features/settings/presentation/views/select_language_view.dart';
 import '../../features/settings/presentation/views/settings_view.dart';
 import '../../features/settings/presentation/widgets/about_us.dart';
+import '../../features/settings/settings_cubit/settings_cubit.dart';
 
 final GoRouter router = GoRouter(
   routes: [
