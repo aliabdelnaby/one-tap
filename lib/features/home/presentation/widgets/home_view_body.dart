@@ -54,6 +54,17 @@ class HomeViewBody extends StatelessWidget {
                       },
                       text: "Open In WhatsApp".tr(),
                     ),
+                    const SizedBox(height: 15),
+                    CustomBtn(
+                      onPressed: () {
+                        if (cubit.phoneFormKey.currentState!.validate()) {
+                          cubit.openTelegram(
+                            phone: phoneController.text,
+                          );
+                        }
+                      },
+                      text: "Open In Telegram".tr(),
+                    ),
                   ],
                 ),
               ),

@@ -3,7 +3,7 @@
     "title": "Enter Mobile Number",
     "This field is required": "This field is required",
     "Ex:": "Ex:",
-    "subTitle": "To start a WhatsApp conversation without saving the number to contacts",
+    "subTitle": "To start a WhatsApp or Telegram conversation without saving the number to contacts",
     "Open In WhatsApp": "Open in WhatsApp",
     "Choose Language": "Choose Language",
     "Arabic": "Arabic",
@@ -23,5 +23,8 @@
     "developer": "This application is developed by Ali Abdelnaby. For any inquiries or support related to this application, Please contact us by clicking the support button.",
     "Feedback": "Feedback",
     "feedback": "We value your feedback! If you have any suggestions, comments, or encounter any issues while using the application, please feel free to reach out to us. Your input helps us improve the application and deliver a better user experience.",
-    "ThankYouMessage": "Thank you for using our Flutter application to simplify your WhatsApp messaging experience!"
+    "ThankYouMessage": "Thank you for using our Flutter application to simplify your WhatsApp messaging experience!",
+    "Open In Telegram": "Open in Telegram",
+    "Telegram not installed": "Telegram not installed",
+    "Whatsapp not installed": "Whatsapp not installed"
 }
