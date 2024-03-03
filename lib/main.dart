@@ -24,7 +24,9 @@ class OneTapWhatsApp extends StatelessWidget {
     return MaterialApp.router(
       debugShowCheckedModeBanner: false,
       routerConfig: router,
-      theme: ThemeData(fontFamily: "Signika"),
+      theme: ThemeData(
+        fontFamily: context.locale.languageCode == 'ar' ? "Rubik" : "Signika",
+      ),
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
