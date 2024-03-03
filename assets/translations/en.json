@@ -11,5 +11,17 @@
     "Language": "Language",
     "Support": "Support",
     "About": "About",
-    "You are on the same language": "You are on the same language"
+    "You are on the same language": "You are on the same language",
+    "About This Application": "About This Application",
+    "Description": "Description",
+    "description": "This application is a handy tool for opening WhatsApp without the need to save the contact first. It streamlines the process of initiating conversations with new or unknown numbers by providing a direct pathway to WhatsApp messaging. This is an easy way to connect with people without saving the contact.",
+    "Features": "Features",
+    "features": "- Direct WhatsApp Access: Easily open WhatsApp directly from within the app.\n- Efficient Communication: Facilitates quick communication with contacts through WhatsApp.\n- User-Friendly Interface: Simple and intuitive design for smooth navigation.\n- User-Friendly Interface: Simple and intuitive design for smooth navigation.\n- Save your time: This is an easy way to connect with people without saving the contact.",
+    "Usage": "Usage",
+    "usage": "To open WhatsApp using this application, simply tap on the designated button or feature that initiates the WhatsApp integration. Users can then seamlessly transition to WhatsApp and continue their conversations without interruptions.",
+    "Developer": "Developer",
+    "developer": "This application is developed by Ali Abdelnaby. For any inquiries or support related to this application, Please contact us by clicking the support button.",
+    "Feedback": "Feedback",
+    "feedback": "We value your feedback! If you have any suggestions, comments, or encounter any issues while using the application, please feel free to reach out to us. Your input helps us improve the application and deliver a better user experience.",
+    "ThankYouMessage": "Thank you for using our Flutter application to simplify your WhatsApp messaging experience!"
 }

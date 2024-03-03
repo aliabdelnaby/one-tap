@@ -6,6 +6,7 @@ import 'package:via_whatsapp/features/home/presentation/views/home_view.dart';
 import 'package:via_whatsapp/features/settings/presentation/settings_cubit/settings_cubit.dart';
 import 'package:via_whatsapp/features/settings/presentation/views/select_language_view.dart';
 import 'package:via_whatsapp/features/settings/presentation/views/settings_view.dart';
+import 'package:via_whatsapp/features/settings/presentation/widgets/about_us.dart';
 
 final GoRouter router = GoRouter(
   routes: [
@@ -54,6 +55,10 @@ final GoRouter router = GoRouter(
           },
         );
       },
+    ),
+    GoRoute(
+      path: '/about',
+      builder: ((context, state) => const AboutUs()),
     ),
   ],
 );
