@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:via_whatsapp/core/functions/navigation.dart';
-import 'package:via_whatsapp/features/home/presentation/widgets/home_view_body.dart';
+import '../../../../core/functions/navigation.dart';
+import '../widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
   const HomeView({super.key});

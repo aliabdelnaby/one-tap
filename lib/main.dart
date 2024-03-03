@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:via_whatsapp/core/app/app.dart';
+import 'core/app/app.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,7 +13,7 @@ Future<void> main() async {
       fallbackLocale: const Locale('en'),
       saveLocale: true,
       startLocale: const Locale("ar"),
-      child: const OneTapWhatsApp(),
+      child: const OneTapApp(),
     ),
   );
 }

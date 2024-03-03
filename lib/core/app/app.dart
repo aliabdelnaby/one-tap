@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:via_whatsapp/core/routes/app_router.dart';
+import '../routes/app_router.dart';
 
-class OneTapWhatsApp extends StatelessWidget {
-  const OneTapWhatsApp({super.key});
+class OneTapApp extends StatelessWidget {
+  const OneTapApp({super.key});
 
   @override
   Widget build(BuildContext context) {

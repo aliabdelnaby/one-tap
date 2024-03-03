@@ -1,7 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:via_whatsapp/core/utils/app_colors.dart';
-import 'package:via_whatsapp/core/utils/app_text_styles.dart';
+
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_text_styles.dart';
 
 class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
