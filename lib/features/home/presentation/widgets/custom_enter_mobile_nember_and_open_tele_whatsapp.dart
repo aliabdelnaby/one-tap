@@ -49,10 +49,7 @@ class _EnterMobileNumberSectionState extends State<EnterMobileNumberSection> {
             onPressed: () {
               if (cubit.phoneFormKey.currentState!.validate()) {
                 cubit.phoneFormKey.currentState!.save();
-                var contactModel = ContactModel(
-                  number: cubit.phoneController.text,
-                  date: DateTime.now().toString(),
-                );
+                ContactModel contactModel = formattedDate(cubit);
                 cubit.addContact(contactModel);
                 cubit.openWhatsapp(
                   context: context,
@@ -70,10 +67,7 @@ class _EnterMobileNumberSectionState extends State<EnterMobileNumberSection> {
             onPressed: () {
               if (cubit.phoneFormKey.currentState!.validate()) {
                 cubit.phoneFormKey.currentState!.save();
-                var contactModel = ContactModel(
-                  number: cubit.phoneController.text,
-                  date: DateTime.now().toString(),
-                );
+                ContactModel contactModel = formattedDate(cubit);
                 cubit.addContact(contactModel);
                 cubit.openTelegram(
                   phone: cubit.phoneController.text,
@@ -88,5 +82,16 @@ class _EnterMobileNumberSectionState extends State<EnterMobileNumberSection> {
         ],
       ),
     );
+  }
+
+  ContactModel formattedDate(HomeCubit cubit) {
+    var currentDate = DateTime.now();
+    var formattedCurrentDate =
+        DateFormat("dd/M/yyyy hh:mm a").format(currentDate);
+    var contactModel = ContactModel(
+      number: cubit.phoneController.text,
+      date: formattedCurrentDate,
+    );
+    return contactModel;
   }
 }
