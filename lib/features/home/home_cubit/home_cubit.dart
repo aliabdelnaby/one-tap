@@ -1,10 +1,8 @@
 import 'dart:io';
-
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
-
 import '../../../core/functions/custom_toast.dart';
 import 'home_state.dart';
 
@@ -23,6 +21,7 @@ class HomeCubit extends Cubit<HomeState> {
     var whatsappURlAndroid = "whatsapp://send?phone=$whatsapp";
     var whatsappURLIos = "https://wa.me/$whatsapp";
     try {
+      emit(OpenWhatsAppLoading());
       if (Platform.isIOS) {
         // for iOS phone only
         if (await canLaunchUrl(Uri.parse(whatsappURLIos))) {
@@ -38,7 +37,9 @@ class HomeCubit extends Cubit<HomeState> {
           showToast("Whatsapp not installed".tr(), Colors.red);
         }
       }
+      emit(OpenWhatsAppSuccess());
     } catch (e) {
+      emit(OpenWhatsAppFailure(errMessage: e.toString()));
       showToast(e.toString(), Colors.red);
     }
   }
@@ -49,6 +50,7 @@ class HomeCubit extends Cubit<HomeState> {
     var teleURlAndroid = "https://t.me/$teleNumber";
     var teleURLIos = "https://t.me/$teleNumber";
     try {
+      emit(OpenTelegramLoading());
       if (Platform.isIOS) {
         // for iOS phone only
         if (await canLaunchUrl(Uri.parse(teleURLIos))) {
@@ -64,8 +66,14 @@ class HomeCubit extends Cubit<HomeState> {
           showToast("Telegram not installed".tr(), Colors.red);
         }
       }
+       emit(OpenTelegramSuccess());
+
     } catch (e) {
+      emit(OpenTelegramFailure(errMessage: e.toString()));
       showToast(e.toString(), Colors.red);
     }
   }
+
+
+
 }

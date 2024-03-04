@@ -6,16 +6,15 @@ import 'package:one_tap/features/home/home_cubit/home_cubit.dart';
 import 'package:one_tap/features/home/presentation/widgets/custom_btn.dart';
 import 'package:one_tap/features/home/presentation/widgets/custom_text_field.dart';
 
-class CustomEnterNumberAndOPenTeleAndWhatsAppForm extends StatefulWidget {
-  const CustomEnterNumberAndOPenTeleAndWhatsAppForm({super.key});
+class EnterMobileNumberSection extends StatefulWidget {
+  const EnterMobileNumberSection({super.key});
 
   @override
-  State<CustomEnterNumberAndOPenTeleAndWhatsAppForm> createState() =>
-      _CustomEnterNumberAndOPenTeleAndWhatsAppFormState();
+  State<EnterMobileNumberSection> createState() =>
+      _EnterMobileNumberSectionState();
 }
 
-class _CustomEnterNumberAndOPenTeleAndWhatsAppFormState
-    extends State<CustomEnterNumberAndOPenTeleAndWhatsAppForm> {
+class _EnterMobileNumberSectionState extends State<EnterMobileNumberSection> {
   @override
   Widget build(BuildContext context) {
     final cubit = BlocProvider.of<HomeCubit>(context);

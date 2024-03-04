@@ -14,7 +14,7 @@ class HomeViewBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          const CustomEnterNumberAndOPenTeleAndWhatsAppForm(),
+          const EnterMobileNumberSection(),
           const SizedBox(height: 20),
           const Divider(),
           Text(
