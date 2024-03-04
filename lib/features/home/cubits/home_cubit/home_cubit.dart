@@ -12,16 +12,15 @@ class HomeCubit extends Cubit<HomeState> {
   GlobalKey<FormState> phoneFormKey = GlobalKey();
   TextEditingController phoneController = TextEditingController();
   String? phone;
- AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+  AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
 
-
-   Future<void> openWhatsapp(
+  Future<void> openWhatsapp(
       {required BuildContext context, required String number}) async {
-    var whatsapp = number; //+201xx enter like this
-    var whatsappURlAndroid = "whatsapp://send?phone=$whatsapp";
-    var whatsappURLIos = "https://wa.me/$whatsapp";
     try {
       emit(OpenWhatsAppLoading());
+      var whatsapp = number; //+201xx enter like this
+      var whatsappURlAndroid = "whatsapp://send?phone=$whatsapp";
+      var whatsappURLIos = "https://wa.me/$whatsapp";
       if (Platform.isIOS) {
         // for iOS phone only
         if (await canLaunchUrl(Uri.parse(whatsappURLIos))) {
@@ -44,13 +43,12 @@ class HomeCubit extends Cubit<HomeState> {
     }
   }
 
-
   Future<void> openTelegram({required String phone}) async {
-    var teleNumber = phone; //+201xx enter like this
-    var teleURlAndroid = "https://t.me/$teleNumber";
-    var teleURLIos = "https://t.me/$teleNumber";
     try {
       emit(OpenTelegramLoading());
+      var teleNumber = phone; //+201xx enter like this
+      var teleURlAndroid = "https://t.me/$teleNumber";
+      var teleURLIos = "https://t.me/$teleNumber";
       if (Platform.isIOS) {
         // for iOS phone only
         if (await canLaunchUrl(Uri.parse(teleURLIos))) {
@@ -66,14 +64,10 @@ class HomeCubit extends Cubit<HomeState> {
           showToast("Telegram not installed".tr(), Colors.red);
         }
       }
-       emit(OpenTelegramSuccess());
-
+      emit(OpenTelegramSuccess());
     } catch (e) {
       emit(OpenTelegramFailure(errMessage: e.toString()));
       showToast(e.toString(), Colors.red);
     }
   }
-
-
-
 }
