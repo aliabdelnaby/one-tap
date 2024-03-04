@@ -18,9 +18,9 @@ class ContactsListView extends StatelessWidget {
           itemCount: contacts.length,
           shrinkWrap: true,
           itemBuilder: ((context, index) {
-            return const Padding(
-              padding: EdgeInsets.symmetric(vertical: 5),
-              child: CustomContactItem(),
+            return Padding(
+              padding: const EdgeInsets.symmetric(vertical: 5),
+              child: CustomContactItem(contact: contacts[index]),
             );
           }),
         );
