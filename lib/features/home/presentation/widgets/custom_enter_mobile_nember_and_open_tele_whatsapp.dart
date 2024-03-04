@@ -54,10 +54,10 @@ class _EnterMobileNumberSectionState extends State<EnterMobileNumberSection> {
                   date: DateTime.now().toString(),
                 );
                 cubit.addContact(contactModel);
-                // cubit.openWhatsapp(
-                //   context: context,
-                //   number: cubit.phoneController.text,
-                // );
+                cubit.openWhatsapp(
+                  context: context,
+                  number: cubit.phoneController.text,
+                );
               } else {
                 cubit.autovalidateMode = AutovalidateMode.always;
                 setState(() {});
@@ -75,9 +75,9 @@ class _EnterMobileNumberSectionState extends State<EnterMobileNumberSection> {
                   date: DateTime.now().toString(),
                 );
                 cubit.addContact(contactModel);
-                // cubit.openTelegram(
-                //   phone: cubit.phoneController.text,
-                // );
+                cubit.openTelegram(
+                  phone: cubit.phoneController.text,
+                );
               } else {
                 cubit.autovalidateMode = AutovalidateMode.always;
                 setState(() {});

@@ -1,3 +1,5 @@
+import 'package:one_tap/core/models/contact_model.dart';
+
 class HomeState {}
 
 final class HomeInitial extends HomeState {}
@@ -30,4 +32,18 @@ final class AddContactFailure extends HomeState {
   final String errMessage;
 
   AddContactFailure({required this.errMessage});
+}
+
+final class ContactsLoading extends HomeState {}
+
+final class ContactstSuccess extends HomeState {
+ final List<ContactModel> contacts;
+
+  ContactstSuccess({required this.contacts});
+}
+
+final class ContactsFailure extends HomeState {
+  final String errMessage;
+
+  ContactsFailure({required this.errMessage});
 }
