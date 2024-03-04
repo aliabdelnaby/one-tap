@@ -12,7 +12,7 @@ Future<void> main() async {
   await EasyLocalization.ensureInitialized();
   await Hive.initFlutter();
   Bloc.observer = SimpleBlocObserver();
-  await Hive.openBox(kContacts);
+  await Hive.openBox<ContactModel>(kContacts);
   Hive.registerAdapter(ContactModelAdapter());
   runApp(
     EasyLocalization(
