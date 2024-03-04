@@ -2,6 +2,10 @@ import 'dart:io';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:one_tap/core/constants/constants.dart';
+import 'package:one_tap/core/models/contact_model.dart';
+import 'package:one_tap/core/utils/app_colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../../core/functions/custom_toast.dart';
 import 'home_state.dart';
@@ -68,6 +72,18 @@ class HomeCubit extends Cubit<HomeState> {
     } catch (e) {
       emit(OpenTelegramFailure(errMessage: e.toString()));
       showToast(e.toString(), Colors.red);
+    }
+  }
+
+  Future<void> addContact(ContactModel contact) async {
+    try {
+      emit(AddContactLoading());
+      var contactsBox = Hive.box<ContactModel>(kContacts);
+      await contactsBox.add(contact);
+      emit(AddContactSuccess());
+    } catch (e) {
+      emit(AddContactFailure(errMessage: e.toString()));
+      showToast(e.toString(), AppColors.primaryColor);
     }
   }
 }

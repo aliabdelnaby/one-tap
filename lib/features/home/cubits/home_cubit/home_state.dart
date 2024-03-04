@@ -21,3 +21,13 @@ final class OpenTelegramFailure extends HomeState {
 
   OpenTelegramFailure({required this.errMessage});
 }
+
+final class AddContactLoading extends HomeState {}
+
+final class AddContactSuccess extends HomeState {}
+
+final class AddContactFailure extends HomeState {
+  final String errMessage;
+
+  AddContactFailure({required this.errMessage});
+}
