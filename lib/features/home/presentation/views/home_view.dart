@@ -31,7 +31,7 @@ class HomeView extends StatelessWidget {
       leading: IconButton(
         onPressed: () {},
         icon: const Icon(
-          Icons.share_outlined,
+          Icons.menu,
           size: 30,
           color: Colors.red,
         ),
