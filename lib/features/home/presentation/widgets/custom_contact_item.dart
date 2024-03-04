@@ -30,12 +30,14 @@ class CustomContactItem extends StatelessWidget {
         leading: CircleAvatar(
           backgroundColor: AppColors.gray200,
           child: Icon(
-            FontAwesomeIcons.whatsapp,
+            FontAwesomeIcons.user,
             color: AppColors.primaryColor,
           ),
         ),
         trailing: IconButton(
-          onPressed: () {},
+          onPressed: () {
+            contact.delete();
+          },
           icon: Icon(
             Icons.delete,
             color: AppColors.grey,
