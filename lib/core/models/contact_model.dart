@@ -1,5 +1,13 @@
-class ContactModel {
+import 'package:hive_flutter/hive_flutter.dart';
+
+part 'contact_model.g.dart';
+
+@HiveType(typeId: 0)
+class ContactModel extends HiveObject {
+
+  @HiveField(0)
   final String number;
+  @HiveField(1)
   final String date;
 
   ContactModel({
