@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:one_tap/core/models/contact_model.dart';
 import 'package:one_tap/core/utils/app_colors.dart';
 import 'package:one_tap/core/utils/app_text_styles.dart';
+import 'package:one_tap/features/home/cubits/home_cubit/home_cubit.dart';
 
 class CustomContactItem extends StatelessWidget {
   const CustomContactItem({super.key, required this.contact});
@@ -37,6 +39,7 @@ class CustomContactItem extends StatelessWidget {
         trailing: IconButton(
           onPressed: () {
             contact.delete();
+            BlocProvider.of<HomeCubit>(context).fetchAllContacts();
           },
           icon: Icon(
             Icons.delete,

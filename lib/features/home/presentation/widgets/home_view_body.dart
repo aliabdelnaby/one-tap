@@ -1,5 +1,4 @@
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:one_tap/core/functions/custom_toast.dart';
@@ -24,13 +23,8 @@ class HomeViewBody extends StatelessWidget {
             listener: (context, state) {
               if (state is AddContactFailure) {
                 showToast(state.errMessage, AppColors.primaryColor);
-                if (kDebugMode) {
-                  print("*****Failure ${state.errMessage}*****");
-                }
               } else if (state is AddContactSuccess) {
-                if (kDebugMode) {
-                  print("*****Success Add Contact*****");
-                }
+                BlocProvider.of<HomeCubit>(context).fetchAllContacts();
               }
             },
             builder: (context, state) {

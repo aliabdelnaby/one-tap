@@ -91,5 +91,6 @@ class HomeCubit extends Cubit<HomeState> {
   fetchAllContacts()async{
     var contactsBox = Hive.box<ContactModel>(kContacts);
     contacts = contactsBox.values.toList();
+    emit(ContactstSuccess());
   }
 }
