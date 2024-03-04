@@ -17,7 +17,7 @@ class CustomTextFormField extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(top: 20),
       child: TextFormField(
-        cursorColor: AppColors.black,
+        cursorColor: AppColors.primaryColor,
         validator: (value) {
           if (value!.isEmpty) {
             return "This field is required".tr();
