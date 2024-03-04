@@ -34,6 +34,7 @@ class HomeViewBody extends StatelessWidget {
                   "Recent Conversation".tr(),
                   style: CustomTextStyle.signikastyle18,
                 ),
+                const SizedBox(height: 15),
                 const Expanded(child: ContactsListView()),
               ],
             ),
