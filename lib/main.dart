@@ -12,8 +12,9 @@ Future<void> main() async {
   await EasyLocalization.ensureInitialized();
   await Hive.initFlutter();
   Bloc.observer = SimpleBlocObserver();
-  await Hive.openBox<ContactModel>(kContacts);
   Hive.registerAdapter(ContactModelAdapter());
+  await Hive.openBox<ContactModel>(kContacts);
+
   runApp(
     EasyLocalization(
       supportedLocales: const [Locale('en'), Locale('ar')],

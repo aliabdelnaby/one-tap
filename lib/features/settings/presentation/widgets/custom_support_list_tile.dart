@@ -15,7 +15,7 @@ class CustomSupportListTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       onTap: () {
-        context.read<SettingsCubit>().sendEmail();
+        BlocProvider.of<SettingsCubit>(context).sendEmail();
       },
       leading: CircleAvatar(
         backgroundColor: AppColors.gray200,
