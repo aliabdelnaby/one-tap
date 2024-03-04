@@ -26,5 +26,6 @@
     "ThankYouMessage": "Thank you for using our Flutter application to simplify your WhatsApp messaging experience!",
     "Open In Telegram": "Open in Telegram",
     "Telegram not installed": "Telegram not installed",
-    "Whatsapp not installed": "Whatsapp not installed"
+    "Whatsapp not installed": "Whatsapp not installed",
+    "Recent Conversation": "Recent Conversation"
 }

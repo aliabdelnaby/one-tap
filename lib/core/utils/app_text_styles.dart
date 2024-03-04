@@ -27,4 +27,8 @@ abstract class CustomTextStyle {
   static final signikaTextFieldstyle = TextStyle(
     color: AppColors.grey,
   );
+  static final signikaTimestyle = TextStyle(
+    color: AppColors.grey,
+    fontSize: 13,
+  );
 }
