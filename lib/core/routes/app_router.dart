@@ -15,7 +15,10 @@ final GoRouter router = GoRouter(
       path: '/',
       builder: ((context, state) => BlocProvider(
             create: (context) => HomeCubit(),
-            child: const HomeView(),
+            child: const Directionality(
+              textDirection: TextDirection.ltr,
+              child: HomeView(),
+            ),
           )),
     ),
     GoRoute(
@@ -59,7 +62,21 @@ final GoRouter router = GoRouter(
     ),
     GoRoute(
       path: '/about',
-      builder: ((context, state) => const AboutUs()),
+      pageBuilder: (context, state) {
+        return CustomTransitionPage(
+          key: state.pageKey,
+          child: const AboutUs(),
+          transitionsBuilder: (context, animation, secondaryAnimation, child) {
+            return SlideTransition(
+              position: Tween<Offset>(
+                begin: const Offset(2.0, 0.0), // Start position (right)
+                end: Offset.zero, // End position (left)
+              ).animate(animation),
+              child: child,
+            );
+          },
+        );
+      },
     ),
   ],
 );

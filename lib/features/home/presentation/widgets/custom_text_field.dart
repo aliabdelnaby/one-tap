@@ -8,19 +8,24 @@ class CustomTextFormField extends StatelessWidget {
   const CustomTextFormField({
     super.key,
     this.controller,
+    this.onSaved,
   });
 
   final TextEditingController? controller;
+  final Function(String?)? onSaved;
 
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(top: 20),
       child: TextFormField(
+        onSaved: onSaved,
         cursorColor: AppColors.primaryColor,
         validator: (value) {
-          if (value!.isEmpty) {
+          if (value?.isEmpty ?? true) {
             return "This field is required".tr();
+          } else if (value!.length <= 10 || value.length == 11) {
+            return 'write the country code such as (+20)'.tr();
           } else {
             return null;
           }
@@ -34,7 +39,7 @@ class CustomTextFormField extends StatelessWidget {
           focusedBorder: UnderlineInputBorder(
             borderSide: BorderSide(color: AppColors.primaryColor),
           ),
-          hintText: '${"Ex:".tr()} +201234567890',
+          hintText: 'Ex: +20 1234567890',
           hintStyle: CustomTextStyle.signikaTextFieldstyle,
         ),
       ),

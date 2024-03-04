@@ -12,6 +12,11 @@ class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
 
   GlobalKey<FormState> phoneFormKey = GlobalKey();
+  TextEditingController phoneController = TextEditingController();
+  String? phone;
+ AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
+
+
    Future<void> openWhatsapp(
       {required BuildContext context, required String number}) async {
     var whatsapp = number; //+201xx enter like this
