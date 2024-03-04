@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../core/functions/navigation.dart';
 import '../widgets/home_view_body.dart';
 
@@ -16,6 +15,7 @@ class HomeView extends StatelessWidget {
 
   AppBar _buildAppBar(BuildContext context) {
     return AppBar(
+      elevation: 0,
       actions: [
         IconButton(
           onPressed: () {
