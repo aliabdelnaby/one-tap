@@ -10,7 +10,10 @@ class ContactsListView extends StatelessWidget {
       itemCount: 10,
       shrinkWrap: true,
       itemBuilder: ((context, index) {
-        return const CustomContactItem();
+        return const Padding(
+          padding: EdgeInsets.symmetric(vertical: 5),
+          child: CustomContactItem(),
+        );
       }),
     );
   }
