@@ -86,4 +86,15 @@ class HomeCubit extends Cubit<HomeState> {
       showToast(e.toString(), AppColors.primaryColor);
     }
   }
+  
+  fetchAllContacts()async{
+    try {
+      emit(ContactsLoading());
+      var contactsBox = Hive.box<ContactModel>(kContacts);
+      emit(ContactstSuccess(contacts: contactsBox.values.toList()));
+    } catch (e) {
+      emit(ContactsFailure(errMessage: e.toString()));
+      showToast(e.toString(), AppColors.primaryColor);
+    }
+  }
 }
