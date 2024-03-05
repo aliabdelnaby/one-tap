@@ -1,3 +1,4 @@
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/models/contact_model.dart';
@@ -14,16 +15,18 @@ class ContactsListView extends StatelessWidget {
       builder: (context, state) {
         List<ContactModel> contacts =
             BlocProvider.of<HomeCubit>(context).contacts!;
-        return ListView.builder(
-          itemCount: contacts.length,
-          shrinkWrap: true,
-          itemBuilder: ((context, index) {
-            return Padding(
-              padding: const EdgeInsets.symmetric(vertical: 5),
-              child: CustomContactItem(contact: contacts[index]),
-            );
-          }),
-        );
+        return contacts.isEmpty
+            ? Center(child: Text("No Conversations yet".tr()))
+            : ListView.builder(
+                itemCount: contacts.length,
+                shrinkWrap: true,
+                itemBuilder: ((context, index) {
+                  return Padding(
+                    padding: const EdgeInsets.symmetric(vertical: 5),
+                    child: CustomContactItem(contact: contacts[index]),
+                  );
+                }),
+              );
       },
     );
   }

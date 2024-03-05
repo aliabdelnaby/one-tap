@@ -33,9 +33,32 @@ class HomeViewBody extends StatelessWidget {
           ),
           const SizedBox(height: 20),
           const Divider(),
-          Text(
-            "Recent Conversation".tr(),
-            style: CustomTextStyle.signikastyle18,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Text(
+                "Recent Conversation".tr(),
+                style: CustomTextStyle.signikastyle18,
+              ),
+              GestureDetector(
+                onTap: () {},
+                child: Row(
+                  children: [
+                    Text(
+                      "Clear All".tr(),
+                      style: TextStyle(
+                        color: AppColors.grey,
+                      ),
+                    ),
+                    Icon(
+                      Icons.delete,
+                      color: AppColors.grey,
+                      size: 18,
+                    ),
+                  ],
+                ),
+              ),
+            ],
           ),
           const SizedBox(height: 15),
           const Expanded(child: ContactsListView()),
