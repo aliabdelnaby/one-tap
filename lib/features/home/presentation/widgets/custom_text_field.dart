@@ -39,7 +39,7 @@ class CustomTextFormField extends StatelessWidget {
           focusedBorder: UnderlineInputBorder(
             borderSide: BorderSide(color: AppColors.primaryColor),
           ),
-          hintText: 'Ex: +20 1234567890',
+          hintText: 'ex: +20 1234567890',
           hintStyle: CustomTextStyle.signikaTextFieldstyle,
         ),
       ),

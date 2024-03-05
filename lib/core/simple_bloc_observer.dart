@@ -18,11 +18,17 @@ class SimpleBlocObserver implements BlocObserver {
   }
 
   @override
-  void onError(BlocBase bloc, Object error, StackTrace stackTrace) {}
+  void onError(BlocBase bloc, Object error, StackTrace stackTrace) {
+    debugPrint("Error = $error");
+  }
 
   @override
-  void onEvent(Bloc bloc, Object? event) {}
+  void onEvent(Bloc bloc, Object? event) {
+    debugPrint("event = $bloc");
+  }
 
   @override
-  void onTransition(Bloc bloc, Transition transition) {}
+  void onTransition(Bloc bloc, Transition transition) {
+    debugPrint("transition = $bloc");
+  }
 }

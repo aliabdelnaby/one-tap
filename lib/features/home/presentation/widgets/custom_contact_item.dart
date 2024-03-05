@@ -16,7 +16,7 @@ class CustomContactItem extends StatelessWidget {
       onTap: () {
         if (contact.iconCode == FontAwesomeIcons.whatsapp.codePoint) {
           cubit.openWhatsapp(
-            context: context,
+            // context: context,
             number: contact.number,
           );
         } else {
@@ -42,7 +42,7 @@ class CustomContactItem extends StatelessWidget {
             style: CustomTextStyle.signikaTimestyle,
           ),
           leading: CircleAvatar(
-            backgroundColor: AppColors.gray200,
+            backgroundColor: AppColors.grey200,
             child: Icon(
               IconDataBrands(
                 contact.iconCode,

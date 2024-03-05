@@ -15,18 +15,24 @@ class ContactsListView extends StatelessWidget {
       builder: (context, state) {
         List<ContactModel> contacts =
             BlocProvider.of<HomeCubit>(context).contacts!;
-        return contacts.isEmpty
-            ? Center(child: Text("No Conversations yet".tr()))
-            : ListView.builder(
-                itemCount: contacts.length,
-                shrinkWrap: true,
-                itemBuilder: ((context, index) {
-                  return Padding(
-                    padding: const EdgeInsets.symmetric(vertical: 5),
-                    child: CustomContactItem(contact: contacts[index]),
-                  );
-                }),
+        if (contacts.isNotEmpty) {
+          return ListView.builder(
+            itemCount: contacts.length,
+            shrinkWrap: true,
+            itemBuilder: ((context, index) {
+              return Padding(
+                padding: const EdgeInsets.symmetric(vertical: 5),
+                child: CustomContactItem(contact: contacts[index]),
               );
+            }),
+          );
+        } else {
+          return Center(
+            child: Text(
+              "No Conversations yet".tr(),
+            ),
+          );
+        }
       },
     );
   }

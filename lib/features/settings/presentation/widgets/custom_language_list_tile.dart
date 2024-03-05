@@ -17,7 +17,7 @@ class CustomLanguageListTile extends StatelessWidget {
         customNavigate(context, "/selectLanguageView");
       },
       leading: CircleAvatar(
-        backgroundColor: AppColors.gray200,
+        backgroundColor: AppColors.grey200,
         child: Icon(
           Icons.language,
           color: AppColors.primaryColor,

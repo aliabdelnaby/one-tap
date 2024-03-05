@@ -1,6 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../core/functions/localization.dart';
 import '../../../../core/functions/navigation.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -13,15 +12,15 @@ class SelectLanguageView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(),
       body: SafeArea(
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Column(
             children: [
-              const SizedBox(height: 25),
               Text(
                 "Choose Language".tr(),
-                style: CustomTextStyle.signikastyle24.copyWith(
+                style: CustomTextStyle.signikastyle28.copyWith(
                   color: AppColors.black,
                 ),
               ),

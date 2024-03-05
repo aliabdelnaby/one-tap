@@ -27,7 +27,7 @@ class _EnterMobileNumberSectionState extends State<EnterMobileNumberSection> {
         children: [
           Text(
             "title".tr(),
-            style: CustomTextStyle.signikastyle24,
+            style: CustomTextStyle.signikastyle28,
           ),
           const SizedBox(height: 5),
           Text(
@@ -54,7 +54,7 @@ class _EnterMobileNumberSectionState extends State<EnterMobileNumberSection> {
                 ContactModel contactModel = dateFormat(cubit, iconCode);
                 cubit.addContact(contactModel);
                 cubit.openWhatsapp(
-                  context: context,
+                  // context: context,
                   number: cubit.phoneController.text,
                 );
               } else {

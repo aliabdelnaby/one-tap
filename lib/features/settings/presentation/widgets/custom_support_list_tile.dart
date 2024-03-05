@@ -10,7 +10,7 @@ class CustomSupportListTile extends StatelessWidget {
   const CustomSupportListTile({
     super.key,
   });
-  
+
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -18,7 +18,7 @@ class CustomSupportListTile extends StatelessWidget {
         BlocProvider.of<SettingsCubit>(context).sendEmail();
       },
       leading: CircleAvatar(
-        backgroundColor: AppColors.gray200,
+        backgroundColor: AppColors.grey200,
         child: Icon(
           Icons.support_agent_outlined,
           color: AppColors.primaryColor,

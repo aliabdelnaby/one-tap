@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'app_colors.dart';
 
 abstract class CustomTextStyle {
-  static final signikastyle24 = TextStyle(
-    fontSize: 24,
+  static final signikastyle28 = TextStyle(
+    fontSize: 28,
     color: AppColors.primaryColor,
   );
   static final signikastyle18 = TextStyle(

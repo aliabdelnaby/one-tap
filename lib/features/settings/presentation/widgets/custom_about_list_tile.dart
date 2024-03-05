@@ -1,6 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-
 import '../../../../core/functions/navigation.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_text_styles.dart';
@@ -17,7 +16,7 @@ class CustomAboutListTile extends StatelessWidget {
         customNavigate(context, "/about");
       },
       leading: CircleAvatar(
-        backgroundColor: AppColors.gray200,
+        backgroundColor: AppColors.grey200,
         child: Icon(
           Icons.info_outline,
           color: AppColors.primaryColor,

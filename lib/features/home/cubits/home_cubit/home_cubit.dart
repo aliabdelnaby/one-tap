@@ -17,8 +17,7 @@ class HomeCubit extends Cubit<HomeState> {
   String? phone;
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
 
-  Future<void> openWhatsapp(
-      {required BuildContext context, required String number}) async {
+  Future<void> openWhatsapp({required String number}) async {
     try {
       emit(OpenWhatsAppLoading());
       var whatsapp = number; //+201xx enter like this
@@ -102,4 +101,5 @@ class HomeCubit extends Cubit<HomeState> {
       emit(DeleteAllContactsFailure(errMessage: e.toString()));
     }
   }
+  
 }
