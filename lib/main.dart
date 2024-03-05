@@ -2,9 +2,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
-import 'package:one_tap/core/constants/constants.dart';
-import 'package:one_tap/core/models/contact_model.dart';
-import 'package:one_tap/core/simple_bloc_observer.dart';
+import 'core/constants/constants.dart';
+import 'core/models/contact_model.dart';
+import 'core/simple_bloc_observer.dart';
 import 'core/app/app.dart';
 
 Future<void> main() async {

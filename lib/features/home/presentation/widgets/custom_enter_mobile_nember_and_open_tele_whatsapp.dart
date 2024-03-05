@@ -1,11 +1,11 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:one_tap/core/models/contact_model.dart';
-import 'package:one_tap/core/utils/app_text_styles.dart';
-import 'package:one_tap/features/home/cubits/home_cubit/home_cubit.dart';
-import 'package:one_tap/features/home/presentation/widgets/custom_btn.dart';
-import 'package:one_tap/features/home/presentation/widgets/custom_text_field.dart';
+import '../../../../core/models/contact_model.dart';
+import '../../../../core/utils/app_text_styles.dart';
+import '../../cubits/home_cubit/home_cubit.dart';
+import 'custom_btn.dart';
+import 'custom_text_field.dart';
 
 class EnterMobileNumberSection extends StatefulWidget {
   const EnterMobileNumberSection({super.key});

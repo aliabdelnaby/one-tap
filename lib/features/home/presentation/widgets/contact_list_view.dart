@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:one_tap/core/models/contact_model.dart';
-import 'package:one_tap/features/home/cubits/home_cubit/home_cubit.dart';
-import 'package:one_tap/features/home/cubits/home_cubit/home_state.dart';
-import 'package:one_tap/features/home/presentation/widgets/custom_contact_item.dart';
+import '../../../../core/models/contact_model.dart';
+import '../../cubits/home_cubit/home_cubit.dart';
+import '../../cubits/home_cubit/home_state.dart';
+import 'custom_contact_item.dart';
 
 class ContactsListView extends StatelessWidget {
   const ContactsListView({super.key});
