@@ -22,7 +22,7 @@ class CustomRecentConversationBar extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Text(
-          "Recent Conversation".tr(),
+          "Recent Conversations".tr(),
           style: CustomTextStyle.signikastyle18,
         ),
         BlocConsumer<HomeCubit, HomeState>(

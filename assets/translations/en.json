@@ -27,7 +27,7 @@
     "Open In Telegram": "Open in Telegram",
     "Telegram not installed": "Telegram not installed",
     "Whatsapp not installed": "Whatsapp not installed",
-    "Recent Conversation": "Recent Conversation",
+    "Recent Conversations": "Recent Conversations",
     "Please write the country code such as (+20)": "Please write the country code such as (+20)",
     "The number must be valid": "The number must be valid",
     "No Conversations yet": "No Conversations yet",
@@ -37,5 +37,9 @@
     "Close": "Close",
     "Delete All Contacts": "Delete All Contacts",
     "Are you sure you want to delete all contacts?": "Are you sure you want to delete all contacts?",
-    "The language has been changed": "The language has been changed"
+    "The language has been changed": "The language has been changed",
+    "-Or using-": "-Or using-",
+    "Telegram": "Telegram",
+    "Call": "Call",
+    "SMS": "SMS"
 }

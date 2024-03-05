@@ -27,7 +27,7 @@
     "Open In Telegram": "افتح في تيليجرام",
     "Telegram not installed": "تيليجرام غير مثبت",
     "Whatsapp not installed": "واتس اب غير مثبت",
-    "Recent Conversation": "المحادثات الأخيرة",
+    "Recent Conversations": "المحادثات الأخيرة",
     "The number must be 11 digits": "يجب أن يكون رقم الهاتف 11 رقما",
     "Please write the country code such as (+20)": "يرجى كتابة رمز الدولة مثل (+20)",
     "The number must be valid": "يجب أن يكون الرقم صالح",
@@ -37,5 +37,9 @@
     "Close": "الغاء",
     "Warnning!!!": "تحذير!!!!",
     "Are you sure you want to delete all contacts?": "هل أنت متأكد أنك تريد حذف جميع جهات الاتصال؟",
-    "The language has been changed": "تم تغيير اللغة"
+    "The language has been changed": "تم تغيير اللغة",
+    "-Or using-": "-او بأستخدام-",
+    "Telegram": "تيليجرام",
+    "Call": "مكالمة",
+    "SMS": "رسالة نصية"
 }

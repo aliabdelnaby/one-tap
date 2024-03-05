@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:one_tap/core/utils/app_colors.dart';
 import '../../../../core/models/contact_model.dart';
 import '../../../../core/utils/app_text_styles.dart';
 import '../../cubits/home_cubit/home_cubit.dart';
@@ -64,23 +65,64 @@ class _EnterMobileNumberSectionState extends State<EnterMobileNumberSection> {
             },
             text: "Open In WhatsApp".tr(),
           ),
-          const SizedBox(height: 15),
-          CustomBtn(
-            onPressed: () {
-              if (cubit.phoneFormKey.currentState!.validate()) {
-                cubit.phoneFormKey.currentState!.save();
-                int iconCode = FontAwesomeIcons.telegram.codePoint;
-                ContactModel contactModel = dateFormat(cubit, iconCode);
-                cubit.addContact(contactModel);
-                cubit.openTelegram(
-                  phone: cubit.phoneController.text,
-                );
-              } else {
-                cubit.autovalidateMode = AutovalidateMode.always;
-                setState(() {});
-              }
-            },
-            text: "Open In Telegram".tr(),
+          const SizedBox(height: 8),
+          Text(
+            "-Or using-".tr(),
+            style: CustomTextStyle.signikastyle15.copyWith(
+              color: AppColors.grey,
+            ),
+          ),
+          const SizedBox(height: 5),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              TextButton.icon(
+                onPressed: () {
+                  if (cubit.phoneFormKey.currentState!.validate()) {
+                    cubit.phoneFormKey.currentState!.save();
+                    int iconCode = FontAwesomeIcons.telegram.codePoint;
+                    ContactModel contactModel = dateFormat(cubit, iconCode);
+                    cubit.addContact(contactModel);
+                    cubit.openTelegram(
+                      phone: cubit.phoneController.text,
+                    );
+                  } else {
+                    cubit.autovalidateMode = AutovalidateMode.always;
+                    setState(() {});
+                  }
+                },
+                icon: const Icon(
+                  FontAwesomeIcons.telegram,
+                  color: Colors.blue,
+                ),
+                label: Text(
+                  "Telegram".tr(),
+                  style: CustomTextStyle.signikaOptionstyle14,
+                ),
+              ),
+              TextButton.icon(
+                onPressed: () {},
+                icon: const Icon(
+                  FontAwesomeIcons.phone,
+                  color: Colors.blue,
+                ),
+                label: Text(
+                  "Call".tr(),
+                  style: CustomTextStyle.signikaOptionstyle14,
+                ),
+              ),
+              TextButton.icon(
+                onPressed: () {},
+                icon: const Icon(
+                  FontAwesomeIcons.solidMessage,
+                  color: Colors.blue,
+                ),
+                label: Text(
+                  "SMS".tr(),
+                  style: CustomTextStyle.signikaOptionstyle14,
+                ),
+              ),
+            ],
           ),
         ],
       ),

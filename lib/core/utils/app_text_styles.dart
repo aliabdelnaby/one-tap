@@ -31,4 +31,8 @@ abstract class CustomTextStyle {
     color: AppColors.grey,
     fontSize: 13,
   );
+  static final signikaOptionstyle14 = TextStyle(
+    color: AppColors.blue,
+    fontSize: 14,
+  );
 }
