@@ -11,41 +11,54 @@ class CustomContactItem extends StatelessWidget {
   final ContactModel contact;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: ShapeDecoration(
-        shape: RoundedRectangleBorder(
-          side: BorderSide(
-            width: 1,
-            color: AppColors.primaryColor,
-          ),
-          borderRadius: BorderRadius.circular(14),
-        ),
-      ),
-      child: ListTile(
-        title: Text(
-          contact.number,
-        ),
-        subtitle: Text(
-          contact.date,
-          style: CustomTextStyle.signikaTimestyle,
-        ),
-        leading: CircleAvatar(
-          backgroundColor: AppColors.gray200,
-          child: Icon(
-            IconDataBrands(
-              contact.iconCode,
+    final cubit = BlocProvider.of<HomeCubit>(context);
+    return GestureDetector(
+      onTap: () {
+        if (contact.iconCode == FontAwesomeIcons.whatsapp.codePoint) {
+          cubit.openWhatsapp(
+            context: context,
+            number: contact.number,
+          );
+        } else {
+          cubit.openTelegram(phone: contact.number);
+        }
+      },
+      child: Container(
+        decoration: ShapeDecoration(
+          shape: RoundedRectangleBorder(
+            side: BorderSide(
+              width: 1,
+              color: AppColors.primaryColor,
             ),
-            color: AppColors.primaryColor,
+            borderRadius: BorderRadius.circular(14),
           ),
         ),
-        trailing: IconButton(
-          onPressed: () {
-            contact.delete();
-            BlocProvider.of<HomeCubit>(context).fetchAllContacts();
-          },
-          icon: Icon(
-            Icons.delete,
-            color: AppColors.grey,
+        child: ListTile(
+          title: Text(
+            contact.number,
+          ),
+          subtitle: Text(
+            contact.date,
+            style: CustomTextStyle.signikaTimestyle,
+          ),
+          leading: CircleAvatar(
+            backgroundColor: AppColors.gray200,
+            child: Icon(
+              IconDataBrands(
+                contact.iconCode,
+              ),
+              color: AppColors.primaryColor,
+            ),
+          ),
+          trailing: IconButton(
+            onPressed: () {
+              contact.delete();
+              BlocProvider.of<HomeCubit>(context).fetchAllContacts();
+            },
+            icon: Icon(
+              Icons.delete,
+              color: AppColors.grey,
+            ),
           ),
         ),
       ),
