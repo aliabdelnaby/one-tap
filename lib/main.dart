@@ -11,9 +11,9 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   await Hive.initFlutter();
-  Bloc.observer = SimpleBlocObserver();
   Hive.registerAdapter(ContactModelAdapter());
   await Hive.openBox<ContactModel>(kContacts);
+  Bloc.observer = SimpleBlocObserver();
 
   runApp(
     EasyLocalization(

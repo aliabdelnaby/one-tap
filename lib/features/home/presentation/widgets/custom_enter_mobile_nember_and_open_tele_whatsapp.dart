@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../../core/models/contact_model.dart';
 import '../../../../core/utils/app_text_styles.dart';
 import '../../cubits/home_cubit/home_cubit.dart';
@@ -49,7 +50,8 @@ class _EnterMobileNumberSectionState extends State<EnterMobileNumberSection> {
             onPressed: () {
               if (cubit.phoneFormKey.currentState!.validate()) {
                 cubit.phoneFormKey.currentState!.save();
-                ContactModel contactModel = formattedDate(cubit);
+                int iconCode = FontAwesomeIcons.whatsapp.codePoint;
+                ContactModel contactModel = dateFormat(cubit, iconCode);
                 cubit.addContact(contactModel);
                 cubit.openWhatsapp(
                   context: context,
@@ -67,7 +69,8 @@ class _EnterMobileNumberSectionState extends State<EnterMobileNumberSection> {
             onPressed: () {
               if (cubit.phoneFormKey.currentState!.validate()) {
                 cubit.phoneFormKey.currentState!.save();
-                ContactModel contactModel = formattedDate(cubit);
+                int iconCode = FontAwesomeIcons.telegram.codePoint;
+                ContactModel contactModel = dateFormat(cubit, iconCode);
                 cubit.addContact(contactModel);
                 cubit.openTelegram(
                   phone: cubit.phoneController.text,
@@ -84,13 +87,14 @@ class _EnterMobileNumberSectionState extends State<EnterMobileNumberSection> {
     );
   }
 
-  ContactModel formattedDate(HomeCubit cubit) {
+  ContactModel dateFormat(HomeCubit cubit, int iconCode) {
     var currentDate = DateTime.now();
     var formattedCurrentDate =
         DateFormat("dd/M/yyyy hh:mm a").format(currentDate);
     var contactModel = ContactModel(
       number: cubit.phoneController.text,
       date: formattedCurrentDate,
+      iconCode: iconCode,
     );
     return contactModel;
   }

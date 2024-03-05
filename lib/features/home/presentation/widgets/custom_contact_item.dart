@@ -32,7 +32,9 @@ class CustomContactItem extends StatelessWidget {
         leading: CircleAvatar(
           backgroundColor: AppColors.gray200,
           child: Icon(
-            FontAwesomeIcons.user,
+            IconDataBrands(
+              contact.iconCode,
+            ),
             color: AppColors.primaryColor,
           ),
         ),
