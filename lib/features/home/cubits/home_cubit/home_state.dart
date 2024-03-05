@@ -42,3 +42,13 @@ final class ContactsFailure extends HomeState {
 
   ContactsFailure({required this.errMessage});
 }
+
+final class DeleteAllContactsLoading extends HomeState {}
+
+final class DeleteAllContactstSuccess extends HomeState {}
+
+final class DeleteAllContactsFailure extends HomeState {
+  final String errMessage;
+
+  DeleteAllContactsFailure({required this.errMessage});
+}

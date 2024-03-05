@@ -5,7 +5,6 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import '../../../../core/constants/constants.dart';
 import '../../../../core/models/contact_model.dart';
-import '../../../../core/utils/app_colors.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../../core/functions/custom_toast.dart';
 import 'home_state.dart';
@@ -83,14 +82,24 @@ class HomeCubit extends Cubit<HomeState> {
       emit(AddContactSuccess());
     } catch (e) {
       emit(AddContactFailure(errMessage: e.toString()));
-      showToast(e.toString(), AppColors.primaryColor);
     }
   }
   
   List<ContactModel>? contacts;
-  fetchAllContacts()async{
+  fetchAllContacts() async {
     var contactsBox = Hive.box<ContactModel>(kContacts);
     contacts = contactsBox.values.toList();
     emit(ContactstSuccess());
+  }
+
+  Future<void> deleteAllData() async {
+    try {
+      emit(DeleteAllContactsLoading());
+      var contactsBox = Hive.box<ContactModel>(kContacts);
+      await contactsBox.clear();
+      emit(DeleteAllContactstSuccess());
+    } catch (e) {
+      emit(DeleteAllContactsFailure(errMessage: e.toString()));
+    }
   }
 }

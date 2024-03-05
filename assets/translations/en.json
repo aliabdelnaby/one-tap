@@ -31,5 +31,10 @@
     "Please write the country code such as (+20)": "Please write the country code such as (+20)",
     "The number must be valid": "The number must be valid",
     "No Conversations yet": "No Conversations yet",
-    "Clear All": "Clear All"
+    "Clear All": "Clear All",
+    "All deleted successfully": "All deleted successfully",
+    "Warnning!!!": "Warnning!!!",
+    "Close": "Close",
+    "Delete All Contacts": "Delete All Contacts",
+    "Are you sure you want to delete all contacts?": "Are you sure you want to delete all contacts?"
 }
