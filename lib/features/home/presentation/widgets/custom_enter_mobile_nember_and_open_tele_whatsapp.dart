@@ -104,7 +104,7 @@ class _EnterMobileNumberSectionState extends State<EnterMobileNumberSection> {
                 onPressed: () {
                   if (cubit.phoneFormKey.currentState!.validate()) {
                     cubit.phoneFormKey.currentState!.save();
-                    int iconCode = FontAwesomeIcons.microsoft.codePoint;
+                    int iconCode = FontAwesomeIcons.phone.codePoint;
                     ContactModel contactModel = dateFormat(cubit, iconCode);
                     cubit.addContact(contactModel);
                     cubit.makeCall(phone: cubit.phoneController.text);
