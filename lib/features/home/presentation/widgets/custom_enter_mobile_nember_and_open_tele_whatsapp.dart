@@ -9,15 +9,15 @@ import '../../cubits/home_cubit/home_cubit.dart';
 import 'custom_btn.dart';
 import 'custom_text_field.dart';
 
-class EnterMobileNumberSection extends StatefulWidget {
-  const EnterMobileNumberSection({super.key});
+class EnterMobileNumberWidgets extends StatefulWidget {
+  const EnterMobileNumberWidgets({super.key});
 
   @override
-  State<EnterMobileNumberSection> createState() =>
-      _EnterMobileNumberSectionState();
+  State<EnterMobileNumberWidgets> createState() =>
+      _EnterMobileNumberWidgetsState();
 }
 
-class _EnterMobileNumberSectionState extends State<EnterMobileNumberSection> {
+class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
   @override
   Widget build(BuildContext context) {
     final cubit = BlocProvider.of<HomeCubit>(context);

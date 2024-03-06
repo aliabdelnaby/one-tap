@@ -14,6 +14,7 @@ class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
 
   GlobalKey<FormState> phoneFormKey = GlobalKey();
+  GlobalKey<ScaffoldState> scaffoldHomekey = GlobalKey();
   TextEditingController phoneController = TextEditingController();
   String? phone;
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
@@ -84,7 +85,7 @@ class HomeCubit extends Cubit<HomeState> {
       emit(AddContactFailure(errMessage: e.toString()));
     }
   }
-  
+
   List<ContactModel>? contacts;
   fetchAllContacts() async {
     var contactsBox = Hive.box<ContactModel>(kContacts);
@@ -102,9 +103,9 @@ class HomeCubit extends Cubit<HomeState> {
       emit(DeleteAllContactsFailure(errMessage: e.toString()));
     }
   }
-  
+
   Future<void> makeCall({required String phone}) async {
-     var phoneNumber = phone; //+201xx enter like this
+    var phoneNumber = phone; //+201xx enter like this
     final call = Uri.parse('tel:$phoneNumber');
     if (await canLaunchUrl(call)) {
       launchUrl(call);
@@ -113,13 +114,5 @@ class HomeCubit extends Cubit<HomeState> {
     }
   }
 
-  // Future<void> sendSMS({required String phone}) async {
-  //  var phoneNumber = phone; //+201xx enter like this
-  //  final url = Uri.parse('sms:$phoneNumber'); 
-  //   if (await canLaunchUrl(url)) {
-  //     await canLaunchUrl(url);
-  //   } else {
-  //    showToast("Could not lanch $url", AppColors.primaryColor);
-  //   }
-  // }
+
 }

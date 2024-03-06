@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
-import '../../../../core/functions/navigation.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:one_tap/features/home/cubits/home_cubit/home_cubit.dart';
+import 'package:one_tap/features/home/presentation/widgets/custom_drawer.dart';
 import '../widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -7,34 +9,11 @@ class HomeView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: _buildAppBar(context),
-      body: const HomeViewBody(),
-    );
-  }
-
-  AppBar _buildAppBar(BuildContext context) {
-    return AppBar(
-      elevation: 0,
-      actions: [
-        IconButton(
-          onPressed: () {
-            customNavigate(context, "/settingsView");
-          },
-          icon: const Icon(
-            Icons.settings,
-            size: 30,
-            color: Colors.red,
-          ),
-        ),
-      ],
-      leading: IconButton(
-        onPressed: () {},
-        icon: const Icon(
-          Icons.menu,
-          size: 30,
-          color: Colors.red,
-        ),
+    return SafeArea(
+      child: Scaffold(
+        key: BlocProvider.of<HomeCubit>(context).scaffoldHomekey,
+        drawer: const CustomDrawer(),
+        body: const HomeViewBody(),
       ),
     );
   }
