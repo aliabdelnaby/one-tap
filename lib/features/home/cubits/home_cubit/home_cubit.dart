@@ -3,6 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:one_tap/core/utils/app_colors.dart';
 import '../../../../core/constants/constants.dart';
 import '../../../../core/models/contact_model.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -102,4 +103,23 @@ class HomeCubit extends Cubit<HomeState> {
     }
   }
   
+  Future<void> makeCall({required String phone}) async {
+     var phoneNumber = phone; //+201xx enter like this
+    final call = Uri.parse('tel:$phoneNumber');
+    if (await canLaunchUrl(call)) {
+      launchUrl(call);
+    } else {
+      showToast("Could not launch $call", AppColors.primaryColor);
+    }
+  }
+
+  // Future<void> sendSMS({required String phone}) async {
+  //  var phoneNumber = phone; //+201xx enter like this
+  //  final url = Uri.parse('sms:$phoneNumber'); 
+  //   if (await canLaunchUrl(url)) {
+  //     await canLaunchUrl(url);
+  //   } else {
+  //    showToast("Could not lanch $url", AppColors.primaryColor);
+  //   }
+  // }
 }

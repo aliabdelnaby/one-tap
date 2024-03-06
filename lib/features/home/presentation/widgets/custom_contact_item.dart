@@ -15,12 +15,11 @@ class CustomContactItem extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         if (contact.iconCode == FontAwesomeIcons.whatsapp.codePoint) {
-          cubit.openWhatsapp(
-            // context: context,
-            number: contact.number,
-          );
-        } else {
+          cubit.openWhatsapp(number: contact.number);
+        } else if (contact.iconCode == FontAwesomeIcons.telegram.codePoint) {
           cubit.openTelegram(phone: contact.number);
+        } else if (contact.iconCode == FontAwesomeIcons.phone.codePoint) {
+          cubit.makeCall(phone: contact.number);
         }
       },
       child: Container(

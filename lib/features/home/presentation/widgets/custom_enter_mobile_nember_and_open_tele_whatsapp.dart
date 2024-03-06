@@ -101,24 +101,24 @@ class _EnterMobileNumberSectionState extends State<EnterMobileNumberSection> {
                 ),
               ),
               TextButton.icon(
-                onPressed: () {},
+                onPressed: () {
+                  if (cubit.phoneFormKey.currentState!.validate()) {
+                    cubit.phoneFormKey.currentState!.save();
+                    int iconCode = FontAwesomeIcons.microsoft.codePoint;
+                    ContactModel contactModel = dateFormat(cubit, iconCode);
+                    cubit.addContact(contactModel);
+                    cubit.makeCall(phone: cubit.phoneController.text);
+                  } else {
+                    cubit.autovalidateMode = AutovalidateMode.always;
+                    setState(() {});
+                  }
+                },
                 icon: const Icon(
                   FontAwesomeIcons.phone,
                   color: Colors.blue,
                 ),
                 label: Text(
                   "Call".tr(),
-                  style: CustomTextStyle.signikaOptionstyle14,
-                ),
-              ),
-              TextButton.icon(
-                onPressed: () {},
-                icon: const Icon(
-                  FontAwesomeIcons.solidMessage,
-                  color: Colors.blue,
-                ),
-                label: Text(
-                  "SMS".tr(),
                   style: CustomTextStyle.signikaOptionstyle14,
                 ),
               ),
