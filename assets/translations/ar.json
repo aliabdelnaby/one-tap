@@ -1,5 +1,5 @@
 {
-    "appName": "OneTap WhatsApp",
+    "appName": "One Tap",
     "title": "أدخل رقم الهاتف المحمول",
     "This field is required": "هذا الحقل مطلوب",
     "Ex:": "مثال:",
@@ -29,7 +29,7 @@
     "Whatsapp not installed": "واتس اب غير مثبت",
     "Recent Conversations": "المحادثات الأخيرة",
     "The number must be 11 digits": "يجب أن يكون رقم الهاتف 11 رقما",
-    "Please write the country code such as (+20)": "يرجى كتابة رمز الدولة مثل (+20)",
+    "Write the country code such as (+20)": "يرجى كتابة رمز الدولة مثل (+20)",
     "The number must be valid": "يجب أن يكون الرقم صالح",
     "No Conversations yet": "لا توجد محادثات حتى الآن",
     "Clear All": "حذف الكل",

@@ -14,13 +14,7 @@ class CustomContactItem extends StatelessWidget {
     final cubit = BlocProvider.of<HomeCubit>(context);
     return GestureDetector(
       onTap: () {
-        if (contact.iconCode == FontAwesomeIcons.whatsapp.codePoint) {
-          cubit.openWhatsapp(number: contact.number);
-        } else if (contact.iconCode == FontAwesomeIcons.telegram.codePoint) {
-          cubit.openTelegram(phone: contact.number);
-        } else if (contact.iconCode == FontAwesomeIcons.phone.codePoint) {
-          cubit.makeCall(phone: contact.number);
-        }
+        openInOPtions(cubit);
       },
       child: Container(
         decoration: ShapeDecoration(
@@ -62,5 +56,15 @@ class CustomContactItem extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void openInOPtions(HomeCubit cubit) {
+    if (contact.iconCode == FontAwesomeIcons.whatsapp.codePoint) {
+      cubit.openWhatsapp(number: contact.number);
+    } else if (contact.iconCode == FontAwesomeIcons.telegram.codePoint) {
+      cubit.openTelegram(phone: contact.number);
+    } else if (contact.iconCode == FontAwesomeIcons.phone.codePoint) {
+      cubit.makeCall(phone: contact.number);
+    }
   }
 }

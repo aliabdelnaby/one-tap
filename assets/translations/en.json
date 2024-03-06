@@ -1,5 +1,5 @@
 {
-    "appName": "OneTap WhatsApp",
+    "appName": "One Tap",
     "title": "Enter Mobile Number",
     "This field is required": "This field is required",
     "Ex:": "Ex:",
@@ -28,7 +28,7 @@
     "Telegram not installed": "Telegram not installed",
     "Whatsapp not installed": "Whatsapp not installed",
     "Recent Conversations": "Recent Conversations",
-    "Please write the country code such as (+20)": "Please write the country code such as (+20)",
+    "Write the country code such as (+20)": "Write the country code such as (+20)",
     "The number must be valid": "The number must be valid",
     "No Conversations yet": "No Conversations yet",
     "Clear All": "Clear All",

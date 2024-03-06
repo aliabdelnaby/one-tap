@@ -31,7 +31,7 @@ class SettingsView extends StatelessWidget {
         icon: Icon(
           Icons.close,
           color: AppColors.primaryColor,
-          size: 24,
+          size: 25,
         ),
       ),
     );

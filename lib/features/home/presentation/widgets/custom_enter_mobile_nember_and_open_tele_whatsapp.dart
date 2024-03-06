@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:one_tap/core/utils/app_colors.dart';
+import 'package:one_tap/features/home/presentation/widgets/custom_home_body_texts.dart';
 import '../../../../core/models/contact_model.dart';
 import '../../../../core/utils/app_text_styles.dart';
 import '../../cubits/home_cubit/home_cubit.dart';
@@ -26,17 +27,8 @@ class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
       autovalidateMode: cubit.autovalidateMode,
       child: Column(
         children: [
-          Text(
-            "title".tr(),
-            style: CustomTextStyle.signikastyle28,
-          ),
-          const SizedBox(height: 5),
-          Text(
-            "subTitle".tr(),
-            textAlign: TextAlign.center,
-            style: CustomTextStyle.signikastyle15,
-          ),
-          const SizedBox(height: 5),
+          const SizedBox(height: 24),
+          const CustomHomeBodyTexts(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 50),
             child: CustomTextFormField(

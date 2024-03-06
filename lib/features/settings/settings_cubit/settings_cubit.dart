@@ -26,4 +26,5 @@ class SettingsCubit extends Cubit<SettingsState> {
       showToast(e.toString(), AppColors.primaryColor);
     }
   }
+  
 }
