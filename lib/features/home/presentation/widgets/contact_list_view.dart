@@ -22,7 +22,9 @@ class ContactsListView extends StatelessWidget {
             itemBuilder: ((context, index) {
               return Padding(
                 padding: const EdgeInsets.symmetric(vertical: 5),
-                child: CustomContactItem(contact: contacts[index]),
+                child: CustomContactItem(
+                  contact: contacts.reversed.toList()[index],
+                ),
               );
             }),
           );
