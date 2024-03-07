@@ -25,6 +25,7 @@ class SettingsView extends StatelessWidget {
       ),
       centerTitle: true,
       leading: IconButton(
+        tooltip: "Back".tr(),
         onPressed: () {
           customPopNavigate(context);
         },

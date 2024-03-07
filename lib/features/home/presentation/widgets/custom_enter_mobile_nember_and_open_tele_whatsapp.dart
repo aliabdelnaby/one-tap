@@ -39,23 +39,26 @@ class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
             ),
           ),
           const SizedBox(height: 20),
-          CustomBtn(
-            onPressed: () {
-              if (cubit.phoneFormKey.currentState!.validate()) {
-                cubit.phoneFormKey.currentState!.save();
-                int iconCode = FontAwesomeIcons.whatsapp.codePoint;
-                ContactModel contactModel = dateFormat(cubit, iconCode);
-                cubit.addContact(contactModel);
-                cubit.openWhatsapp(
-                  // context: context,
-                  number: cubit.phoneController.text,
-                );
-              } else {
-                cubit.autovalidateMode = AutovalidateMode.always;
-                setState(() {});
-              }
-            },
-            text: "Open In WhatsApp".tr(),
+          Tooltip(
+            message: "Open In WhatsApp".tr(),
+            child: CustomBtn(
+              onPressed: () {
+                if (cubit.phoneFormKey.currentState!.validate()) {
+                  cubit.phoneFormKey.currentState!.save();
+                  int iconCode = FontAwesomeIcons.whatsapp.codePoint;
+                  ContactModel contactModel = dateFormat(cubit, iconCode);
+                  cubit.addContact(contactModel);
+                  cubit.openWhatsapp(
+                    // context: context,
+                    number: cubit.phoneController.text,
+                  );
+                } else {
+                  cubit.autovalidateMode = AutovalidateMode.always;
+                  setState(() {});
+                }
+              },
+              text: "Open In WhatsApp".tr(),
+            ),
           ),
           const SizedBox(height: 8),
           Text(

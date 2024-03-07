@@ -42,5 +42,8 @@
     "Telegram": "Telegram",
     "Call": "Call",
     "SMS": "SMS",
-    "There are no contacts to delete": "There are no contacts to delete"
+    "There are no contacts to delete": "There are no contacts to delete",
+    "Settings": "Settings",
+    "Delete": "Delete",
+    "Back": "Back"
 }

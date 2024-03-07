@@ -1,4 +1,4 @@
-
+import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:one_tap/core/functions/navigation.dart';
@@ -28,14 +28,17 @@ class CustomHomeAppBar extends StatelessWidget {
             size: 25,
           ),
         ),
-        GestureDetector(
-          onTap: () {
-            customNavigate(context, "/settingsView");
-          },
-          child: Icon(
-            FontAwesomeIcons.gear,
-            color: AppColors.primaryColor,
-            size: 25,
+        Tooltip(
+          message: "Settings".tr(),
+          child: GestureDetector(
+            onTap: () {
+              customNavigate(context, "/settingsView");
+            },
+            child: Icon(
+              FontAwesomeIcons.gear,
+              color: AppColors.primaryColor,
+              size: 25,
+            ),
           ),
         ),
       ],

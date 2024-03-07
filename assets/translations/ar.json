@@ -42,5 +42,8 @@
     "Telegram": "تيليجرام",
     "Call": "مكالمة",
     "SMS": "رسالة نصية",
-    "There are no contacts to delete": "لا توجد جهات اتصال لحذفها"
+    "There are no contacts to delete": "لا توجد جهات اتصال لحذفها",
+    "Settings": "الاعدادات",
+    "Delete": "حذف",
+    "Back": "رجوع"
 }
