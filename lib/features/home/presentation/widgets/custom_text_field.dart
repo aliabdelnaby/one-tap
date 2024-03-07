@@ -25,6 +25,8 @@ class CustomTextFormField extends StatelessWidget {
           if (value?.isEmpty ?? true) {
             return "This field is required".tr();
           } else if (value!.length <= 10) {
+            return "Enter a valid number".tr();
+          } else if (!value.startsWith("+")) {
             return 'Write the country code such as (+20)'.tr();
           } else {
             return null;
