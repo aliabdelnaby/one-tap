@@ -46,5 +46,6 @@
     "Settings": "Settings",
     "Delete": "Delete",
     "Back": "Back",
-    "Enter a valid number": "Enter a valid number"
+    "Enter a valid number": "Enter a valid number",
+    "Please delete the spaces in the phone number": "Please delete the spaces in the phone number"
 }

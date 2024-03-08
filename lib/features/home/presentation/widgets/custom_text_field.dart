@@ -28,6 +28,8 @@ class CustomTextFormField extends StatelessWidget {
             return "Enter a valid number".tr();
           } else if (!value.startsWith("+")) {
             return 'Write the country code such as (+20)'.tr();
+          } else if (value.contains(' ')) {
+            return "Please delete the spaces in the phone number".tr();
           } else {
             return null;
           }

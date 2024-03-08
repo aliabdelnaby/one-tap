@@ -9,6 +9,8 @@ import '../../../../core/models/contact_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 import '../../../../core/functions/custom_toast.dart';
 import 'home_state.dart';
+import 'package:flutter/services.dart';
+
 
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
@@ -114,5 +116,22 @@ class HomeCubit extends Cubit<HomeState> {
     }
   }
 
+  Future<void> checkClipboard() async {
+    ClipboardData? data = await Clipboard.getData(Clipboard.kTextPlain);
+    if (data != null && data.text != null) {
+      String clipboardText = data.text!;
+      phoneController.text = clipboardText;
+    }
+  }
 
+  removeSpaces(){
+    phoneController.addListener(() {
+      final text = phoneController.text;
+      phoneController.value = phoneController.value.copyWith(
+        text: text.replaceAll(' ', ''), // Remove spaces
+      );
+    });
+  }
+
+  
 }

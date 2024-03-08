@@ -65,8 +65,9 @@ class CustomContactItem extends StatelessWidget {
       cubit.openWhatsapp(number: contact.number);
     } else if (contact.iconCode == FontAwesomeIcons.telegram.codePoint) {
       cubit.openTelegram(phone: contact.number);
-    } else if (contact.iconCode == FontAwesomeIcons.phone.codePoint) {
-      cubit.makeCall(phone: contact.number);
     }
+    //  else if (contact.iconCode == FontAwesomeIcons.phone.codePoint) {
+    //   cubit.makeCall(phone: contact.number);
+    // }
   }
 }

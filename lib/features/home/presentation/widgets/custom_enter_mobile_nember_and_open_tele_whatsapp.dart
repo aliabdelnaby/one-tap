@@ -99,9 +99,9 @@ class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
                 onPressed: () {
                   if (cubit.phoneFormKey.currentState!.validate()) {
                     cubit.phoneFormKey.currentState!.save();
-                    int iconCode = FontAwesomeIcons.phone.codePoint;
-                    ContactModel contactModel = dateFormat(cubit, iconCode);
-                    cubit.addContact(contactModel);
+                    // int iconCode = FontAwesomeIcons.phone.codePoint;
+                    // ContactModel contactModel = dateFormat(cubit, iconCode);
+                    // cubit.addContact(contactModel);
                     cubit.makeCall(phone: cubit.phoneController.text);
                   } else {
                     cubit.autovalidateMode = AutovalidateMode.always;

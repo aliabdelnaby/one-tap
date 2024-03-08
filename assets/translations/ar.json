@@ -46,5 +46,6 @@
     "Settings": "الاعدادات",
     "Delete": "حذف",
     "Back": "رجوع",
-    "Enter a valid number": "أدخل رقمًا صالحًا"
+    "Enter a valid number": "أدخل رقمًا صالحًا",
+    "Please delete the spaces in the phone number": "الرجاء حذف المسافات في رقم الهاتف"
 }

@@ -16,18 +16,18 @@ class CustomHomeAppBar extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        GestureDetector(
-          onTap: () {
-            cubit.scaffoldHomekey.currentState!.openDrawer();
-          },
-          child: Icon(
-            FontAwesomeIcons.bars,
-            color: AppColors.primaryColor,
-            size: 25,
-          ),
-        ),
+        // GestureDetector(
+        //   onTap: () {
+        //     cubit.scaffoldHomekey.currentState!.openDrawer();
+        //   },
+        //   child: Icon(
+        //     FontAwesomeIcons.bars,
+        //     color: AppColors.primaryColor,
+        //     size: 25,
+        //   ),
+        // ),
         Tooltip(
           message: "Settings".tr(),
           child: GestureDetector(
