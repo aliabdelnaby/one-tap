@@ -9,10 +9,12 @@ class CustomTextFormField extends StatelessWidget {
     super.key,
     this.controller,
     this.onSaved,
+    this.suffixIcon,
   });
 
   final TextEditingController? controller;
   final Function(String?)? onSaved;
+  final Widget? suffixIcon;
 
   @override
   Widget build(BuildContext context) {
@@ -37,6 +39,7 @@ class CustomTextFormField extends StatelessWidget {
         controller: controller,
         keyboardType: TextInputType.number,
         decoration: InputDecoration(
+          suffixIcon: suffixIcon,
           enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(color: AppColors.primaryColor),
           ),

@@ -36,6 +36,17 @@ class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
               onSaved: (value) {
                 cubit.phone = value;
               },
+              suffixIcon: GestureDetector(
+                onTap: () {
+                  setState(() {
+                    cubit.phoneController.clear();
+                  });
+                },
+                child: const Icon(
+                  Icons.clear,
+                  size: 18,
+                ),
+              ),
             ),
           ),
           const SizedBox(height: 20),
