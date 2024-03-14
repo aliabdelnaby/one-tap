@@ -19,24 +19,6 @@ class _HomeViewBodyState extends State<HomeViewBody> {
   BannerAd? bannerAd;
   bool isLoaded = false;
 
-  void loadAd() {
-    bannerAd = BannerAd(
-      size: AdSize.banner,
-      adUnitId: AdManager.bannerHome,
-      listener: BannerAdListener(
-        onAdLoaded: (ad) {
-          setState(() {
-            isLoaded = true;
-          });
-        },
-        onAdFailedToLoad: (ad, error) {
-          ad.dispose();
-        },
-      ),
-      request: const AdRequest(),
-    )..load();
-  }
-
   @override
   void initState() {
     loadAd();
@@ -59,6 +41,9 @@ class _HomeViewBodyState extends State<HomeViewBody> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          const SizedBox(height: 10),
+          CustomHomeAppBar(cubit: cubit),
+          const SizedBox(height: 15),
           Center(
             child: isLoaded
                 ? SizedBox(
@@ -68,8 +53,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
                   )
                 : const SizedBox(),
           ),
-          const SizedBox(height: 20),
-          CustomHomeAppBar(cubit: cubit),
+          const SizedBox(height: 10),
           EnterMobileNumberSection(cubit: cubit),
           const SizedBox(height: 20),
           const Divider(),
@@ -79,5 +63,23 @@ class _HomeViewBodyState extends State<HomeViewBody> {
         ],
       ),
     );
+  }
+
+  void loadAd() {
+    bannerAd = BannerAd(
+      size: AdSize.banner,
+      adUnitId: AdManager.bannerHome,
+      listener: BannerAdListener(
+        onAdLoaded: (ad) {
+          setState(() {
+            isLoaded = true;
+          });
+        },
+        onAdFailedToLoad: (ad, error) {
+          ad.dispose();
+        },
+      ),
+      request: const AdRequest(),
+    )..load();
   }
 }

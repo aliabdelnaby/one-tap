@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:one_tap/core/admob/ads_functions.dart';
 import '../../../../core/functions/localization.dart';
 import '../../../../core/functions/navigation.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -30,6 +31,7 @@ class SelectLanguageView extends StatelessWidget {
                 children: [
                   CustomBtn(
                     onPressed: () {
+                      Ads().showAd();
                       LocalizationChecker.changeLanguageToArabic(context);
                       customReplacementNavigate(context, "/");
                     },
@@ -37,6 +39,7 @@ class SelectLanguageView extends StatelessWidget {
                   ),
                   CustomBtn(
                     onPressed: () {
+                      Ads().showAd();
                       LocalizationChecker.changeLanguageToEnglish(context);
                       customReplacementNavigate(context, "/");
                     },
