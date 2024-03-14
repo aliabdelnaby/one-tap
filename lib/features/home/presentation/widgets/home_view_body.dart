@@ -38,8 +38,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
     final cubit = BlocProvider.of<HomeCubit>(context);
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      child: ListView(
         children: [
           const SizedBox(height: 10),
           CustomHomeAppBar(cubit: cubit),
@@ -59,7 +58,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
           const Divider(),
           CustomRecentConversationBar(cubit: cubit),
           const SizedBox(height: 15),
-          const Expanded(child: ContactsListView()),
+          const ContactsListView(),
         ],
       ),
     );

@@ -17,6 +17,7 @@ class ContactsListView extends StatelessWidget {
             BlocProvider.of<HomeCubit>(context).contacts!;
         if (contacts.isNotEmpty) {
           return ListView.builder(
+            physics: const NeverScrollableScrollPhysics(),
             itemCount: contacts.length,
             shrinkWrap: true,
             itemBuilder: ((context, index) {
@@ -30,6 +31,7 @@ class ContactsListView extends StatelessWidget {
           );
         } else {
           return Center(
+            heightFactor: 5,
             child: Text(
               "No Conversations yet".tr(),
             ),
