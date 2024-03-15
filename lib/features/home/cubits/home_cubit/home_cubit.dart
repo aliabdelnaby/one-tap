@@ -11,7 +11,6 @@ import '../../../../core/functions/custom_toast.dart';
 import 'home_state.dart';
 import 'package:flutter/services.dart';
 
-
 class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
 
@@ -124,7 +123,7 @@ class HomeCubit extends Cubit<HomeState> {
     }
   }
 
-  removeSpaces(){
+  removeSpaces() {
     phoneController.addListener(() {
       final text = phoneController.text;
       phoneController.value = phoneController.value.copyWith(
@@ -133,5 +132,4 @@ class HomeCubit extends Cubit<HomeState> {
     });
   }
 
-  
 }

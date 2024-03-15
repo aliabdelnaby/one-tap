@@ -2,6 +2,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:one_tap/core/functions/custom_snack_bar.dart';
 import '../../../../core/models/contact_model.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_text_styles.dart';
@@ -49,6 +50,11 @@ class CustomContactItem extends StatelessWidget {
             onPressed: () {
               contact.delete();
               BlocProvider.of<HomeCubit>(context).fetchAllContacts();
+              customSnackBar(
+                context,
+                "The contact has been deleted".tr(),
+                AppColors.green,
+              );
             },
             icon: Icon(
               Icons.delete,
@@ -66,8 +72,5 @@ class CustomContactItem extends StatelessWidget {
     } else if (contact.iconCode == FontAwesomeIcons.telegram.codePoint) {
       cubit.openTelegram(phone: contact.number);
     }
-    //  else if (contact.iconCode == FontAwesomeIcons.phone.codePoint) {
-    //   cubit.makeCall(phone: contact.number);
-    // }
   }
 }

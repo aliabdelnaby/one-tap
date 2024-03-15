@@ -47,5 +47,8 @@
     "Delete": "Delete",
     "Back": "Back",
     "Enter a valid number": "Enter a valid number",
-    "Please delete the spaces in the phone number": "Please delete the spaces in the phone number"
+    "Please delete the spaces in the phone number": "Please delete the spaces in the phone number",
+    "Paste": "Paste",
+    "There is no text to paste": "There is no text to paste",
+    "The contact has been deleted": "The contact has been deleted"
 }

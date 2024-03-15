@@ -47,5 +47,8 @@
     "Delete": "حذف",
     "Back": "رجوع",
     "Enter a valid number": "أدخل رقمًا صالحًا",
-    "Please delete the spaces in the phone number": "الرجاء حذف المسافات في رقم الهاتف"
+    "Please delete the spaces in the phone number": "الرجاء حذف المسافات في رقم الهاتف",
+    "Paste": "لصق الرقم",
+    "There is no text to paste": "لا يوجد نص للصقه",
+    "The contact has been deleted": "تم حذف جهة الاتصال"
 }

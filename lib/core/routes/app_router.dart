@@ -14,7 +14,6 @@ final GoRouter router = GoRouter(
       path: '/',
       builder: ((context, state) => BlocProvider(
             create: (context) => HomeCubit()
-              ..checkClipboard()
               ..removeSpaces()
               ..fetchAllContacts(),
             child: const Directionality(

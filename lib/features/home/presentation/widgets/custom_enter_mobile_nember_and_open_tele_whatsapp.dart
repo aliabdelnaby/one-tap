@@ -49,7 +49,24 @@ class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
               ),
             ),
           ),
-          const SizedBox(height: 20),
+          const SizedBox(height: 5),
+          TextButton.icon(
+            onPressed: () {
+              cubit.checkClipboard();
+            },
+            icon: Icon(
+              FontAwesomeIcons.paste,
+              size: 16,
+              color: AppColors.primaryColor,
+            ),
+            label: Text(
+              "Paste".tr(),
+              style: CustomTextStyle.signikaOptionstyle14.copyWith(
+                color: AppColors.primaryColor,
+              ),
+            ),
+          ),
+          const SizedBox(height: 5),
           Tooltip(
             message: "Open In WhatsApp".tr(),
             child: CustomBtn(
@@ -60,7 +77,6 @@ class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
                   ContactModel contactModel = dateFormat(cubit, iconCode);
                   cubit.addContact(contactModel);
                   cubit.openWhatsapp(
-                    // context: context,
                     number: cubit.phoneController.text,
                   );
                 } else {
@@ -110,9 +126,6 @@ class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
                 onPressed: () {
                   if (cubit.phoneFormKey.currentState!.validate()) {
                     cubit.phoneFormKey.currentState!.save();
-                    // int iconCode = FontAwesomeIcons.phone.codePoint;
-                    // ContactModel contactModel = dateFormat(cubit, iconCode);
-                    // cubit.addContact(contactModel);
                     cubit.makeCall(phone: cubit.phoneController.text);
                   } else {
                     cubit.autovalidateMode = AutovalidateMode.always;
