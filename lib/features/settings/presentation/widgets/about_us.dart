@@ -1,7 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:one_tap/core/admob/ad_manager.dart';
+import '../../../../core/admob/ad_manager.dart';
 import '../../../../core/utils/app_colors.dart';
 
 class AboutUs extends StatefulWidget {

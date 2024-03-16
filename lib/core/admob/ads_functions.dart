@@ -1,6 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:one_tap/core/admob/ad_manager.dart';
+import 'ad_manager.dart';
 
 class Ads {
   InterstitialAd? _interstitialAd;

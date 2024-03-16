@@ -1,9 +1,9 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:one_tap/core/admob/ads_functions.dart';
-import 'package:one_tap/core/functions/navigation.dart';
-import 'package:one_tap/core/utils/app_colors.dart';
+import '../../../../core/admob/ads_functions.dart';
+import '../../../../core/functions/navigation.dart';
+import '../../../../core/utils/app_colors.dart';
 
 class CustomHomeAppBar extends StatelessWidget {
   const CustomHomeAppBar({super.key});

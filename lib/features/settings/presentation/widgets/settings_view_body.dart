@@ -1,7 +1,7 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:one_tap/core/admob/ad_manager.dart';
+import '../../../../core/admob/ad_manager.dart';
 import 'custom_about_list_tile.dart';
 import 'custom_language_list_tile.dart';
 import 'custom_support_list_tile.dart';
@@ -14,8 +14,10 @@ class SettingsViewBody extends StatefulWidget {
 }
 
 class _SettingsViewBodyState extends State<SettingsViewBody> {
+
   NativeAd? nativeAd;
   bool nativeAdIsLoaded = false;
+  
   @override
   void initState() {
     loadNativeAd();

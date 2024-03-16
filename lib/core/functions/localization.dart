@@ -1,6 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
-import 'package:one_tap/core/functions/custom_snack_bar.dart';
+import 'custom_snack_bar.dart';
 import '../utils/app_colors.dart';
 
 class LocalizationChecker {

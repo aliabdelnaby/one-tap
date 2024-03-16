@@ -1,12 +1,13 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:one_tap/core/functions/custom_snack_bar.dart';
-import 'package:one_tap/core/utils/app_colors.dart';
-import 'package:one_tap/core/utils/app_text_styles.dart';
-import 'package:one_tap/features/home/cubits/home_cubit/home_cubit.dart';
-import 'package:one_tap/features/home/cubits/home_cubit/home_state.dart';
-import 'package:one_tap/features/home/presentation/widgets/clear_all_alert_dialog.dart';
+
+import '../../../../core/functions/custom_snack_bar.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_text_styles.dart';
+import '../../cubits/home_cubit/home_cubit.dart';
+import '../../cubits/home_cubit/home_state.dart';
+import 'clear_all_alert_dialog.dart';
 
 class CustomRecentConversationBar extends StatelessWidget {
   const CustomRecentConversationBar({
