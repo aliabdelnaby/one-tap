@@ -4,31 +4,15 @@ import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:one_tap/core/admob/ads_functions.dart';
 import 'package:one_tap/core/functions/navigation.dart';
 import 'package:one_tap/core/utils/app_colors.dart';
-import 'package:one_tap/features/home/cubits/home_cubit/home_cubit.dart';
 
 class CustomHomeAppBar extends StatelessWidget {
-  const CustomHomeAppBar({
-    super.key,
-    required this.cubit,
-  });
-
-  final HomeCubit cubit;
+  const CustomHomeAppBar({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        // GestureDetector(
-        //   onTap: () {
-        //     cubit.scaffoldHomekey.currentState!.openDrawer();
-        //   },
-        //   child: Icon(
-        //     FontAwesomeIcons.bars,
-        //     color: AppColors.primaryColor,
-        //     size: 25,
-        //   ),
-        // ),
         Tooltip(
           message: "Settings".tr(),
           child: GestureDetector(

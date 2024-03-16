@@ -41,7 +41,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
       child: ListView(
         children: [
           const SizedBox(height: 10),
-          CustomHomeAppBar(cubit: cubit),
+          const CustomHomeAppBar(),
           const SizedBox(height: 15),
           Center(
             child: isLoaded

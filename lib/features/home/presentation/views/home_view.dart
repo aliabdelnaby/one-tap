@@ -11,7 +11,6 @@ class HomeView extends StatelessWidget {
     return SafeArea(
       child: Scaffold(
         key: BlocProvider.of<HomeCubit>(context).scaffoldHomekey,
-        // drawer: const CustomDrawer(),
         body: const HomeViewBody(),
       ),
     );
