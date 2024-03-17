@@ -1,10 +1,10 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-
+import 'package:one_tap/features/settings/presentation/widgets/contact_us_dialog.dart';
+import 'package:one_tap/features/settings/settings_cubit/settings_cubit.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_text_styles.dart';
-import '../../settings_cubit/settings_cubit.dart';
 
 class CustomSupportListTile extends StatelessWidget {
   const CustomSupportListTile({
@@ -13,9 +13,18 @@ class CustomSupportListTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cubit = BlocProvider.of<SettingsCubit>(context);
     return ListTile(
       onTap: () {
-        BlocProvider.of<SettingsCubit>(context).sendEmail();
+        showDialog(
+          useSafeArea: true,
+          context: context,
+          builder: (context) {
+            return CustomContactUsDialog(
+              cubit: cubit,
+            );
+          },
+        );
       },
       leading: CircleAvatar(
         backgroundColor: AppColors.grey200,
