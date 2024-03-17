@@ -1,6 +1,9 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:one_tap/core/admob/ads_functions.dart';
 import '../../../../core/admob/ad_manager.dart';
 import 'custom_home_app_bar.dart';
 import 'enter_mobile_number_section.dart';
@@ -18,10 +21,12 @@ class HomeViewBody extends StatefulWidget {
 class _HomeViewBodyState extends State<HomeViewBody> {
   BannerAd? bannerAd;
   bool isLoaded = false;
+  Timer? timer;
 
   @override
   void initState() {
     loadAd();
+    delayedShowAd();
     super.initState();
   }
 
@@ -30,6 +35,7 @@ class _HomeViewBodyState extends State<HomeViewBody> {
     if (isLoaded) {
       bannerAd!.dispose();
     }
+    timer?.cancel();
     super.dispose();
   }
 
@@ -80,5 +86,14 @@ class _HomeViewBodyState extends State<HomeViewBody> {
       ),
       request: const AdRequest(),
     )..load();
+  }
+
+  void delayedShowAd() {
+    timer = Timer.periodic(
+      const Duration(seconds: 90),
+      (timer) {
+        Ads().showAd(); // Call delayedShowAd every 90 second
+      },
+    );
   }
 }
