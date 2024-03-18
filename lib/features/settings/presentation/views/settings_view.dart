@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/functions/navigation.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -32,7 +33,7 @@ class SettingsView extends StatelessWidget {
         icon: Icon(
           Icons.close,
           color: AppColors.primaryColor,
-          size: 25,
+          size: 25.sp,
         ),
       ),
     );

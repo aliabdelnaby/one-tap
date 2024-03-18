@@ -5,6 +5,7 @@ import 'ad_manager.dart';
 class Ads {
   InterstitialAd? _interstitialAd;
   AppOpenAd? _appOpenAd;
+
   void showAd() {
     InterstitialAd.load(
       adUnitId: AdManager.interstitialHome,

@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import '../../../../core/utils/app_colors.dart';
 import 'custom_home_body_texts.dart';
@@ -42,21 +43,21 @@ class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
                     cubit.phoneController.clear();
                   });
                 },
-                child: const Icon(
+                child: Icon(
                   Icons.clear,
-                  size: 18,
+                  size: 18.sp,
                 ),
               ),
             ),
           ),
-          const SizedBox(height: 5),
+          SizedBox(height: 5.h),
           TextButton.icon(
             onPressed: () {
               cubit.checkClipboard();
             },
             icon: Icon(
               FontAwesomeIcons.paste,
-              size: 16,
+              size: 16.sp,
               color: AppColors.primaryColor,
             ),
             label: Text(
@@ -66,10 +67,12 @@ class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
               ),
             ),
           ),
-          const SizedBox(height: 5),
+          SizedBox(height: 5.h),
           Tooltip(
             message: "Open In WhatsApp".tr(),
             child: CustomBtn(
+              height: MediaQuery.of(context).size.width * .15,
+              width: MediaQuery.of(context).size.height * .25,
               onPressed: () {
                 if (cubit.phoneFormKey.currentState!.validate()) {
                   cubit.phoneFormKey.currentState!.save();
@@ -87,15 +90,15 @@ class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
               text: "Open In WhatsApp".tr(),
             ),
           ),
-          const SizedBox(height: 10),
+          SizedBox(height: 10.h),
           Text(
             "-Or using-".tr(),
             style: CustomTextStyle.signikastyle15.copyWith(
               color: AppColors.grey,
-              fontSize: 13,
+              fontSize: 13.sp,
             ),
           ),
-          const SizedBox(height: 5),
+          SizedBox(height: 5.h),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [

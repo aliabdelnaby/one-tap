@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/functions/custom_snack_bar.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -62,7 +63,7 @@ class CustomRecentConversationBar extends StatelessWidget {
               icon: Icon(
                 Icons.delete,
                 color: AppColors.grey,
-                size: 18,
+                size: 18.sp,
               ),
             );
           },

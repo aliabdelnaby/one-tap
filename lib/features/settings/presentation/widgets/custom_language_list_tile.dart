@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/functions/navigation.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -30,7 +31,7 @@ class CustomLanguageListTile extends StatelessWidget {
       trailing: Icon(
         Icons.arrow_forward_ios_rounded,
         color: AppColors.primaryColor,
-        size: 20,
+        size: 20.sp,
       ),
     );
   }

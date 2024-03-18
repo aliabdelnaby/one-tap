@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:one_tap/core/admob/ads_functions.dart';
 import 'custom_home_app_bar.dart';
 import 'enter_mobile_number_section.dart';
@@ -37,14 +38,14 @@ class _HomeViewBodyState extends State<HomeViewBody> {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: ListView(
         children: [
-          const SizedBox(height: 20),
+          SizedBox(height: 20.h),
           const CustomHomeAppBar(),
-          const SizedBox(height: 10),
+          SizedBox(height: 10.h),
           EnterMobileNumberSection(cubit: cubit),
-          const SizedBox(height: 20),
+          SizedBox(height: 20.h),
           const Divider(),
           CustomRecentConversationBar(cubit: cubit),
-          const SizedBox(height: 15),
+          SizedBox(height: 15.h),
           const ContactsListView(),
         ],
       ),

@@ -1,27 +1,28 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import 'app_colors.dart';
 
 abstract class CustomTextStyle {
   static final signikastyle28 = TextStyle(
-    fontSize: 28,
+    fontSize: 28.sp,
     color: AppColors.primaryColor,
   );
   static final signikastyle18 = TextStyle(
-    fontSize: 18,
+    fontSize: 18.sp,
     color: AppColors.primaryColor,
   );
   static final signikastyle20 = TextStyle(
-    fontSize: 20,
+    fontSize: 20.sp,
     color: AppColors.primaryColor,
     fontWeight: FontWeight.bold,
   );
   static final signikastyle15 = TextStyle(
-    fontSize: 15,
+    fontSize: 15.sp,
     color: AppColors.black,
   );
   static final signikaBtnstyle16 = TextStyle(
-    fontSize: 16,
+    fontSize: 16.sp,
     color: AppColors.white,
   );
   static final signikaTextFieldstyle = TextStyle(
@@ -29,10 +30,10 @@ abstract class CustomTextStyle {
   );
   static final signikaTimestyle = TextStyle(
     color: AppColors.grey,
-    fontSize: 13,
+    fontSize: 13.sp,
   );
   static final signikaOptionstyle14 = TextStyle(
     color: AppColors.blue,
-    fontSize: 14,
+    fontSize: 14.sp,
   );
 }

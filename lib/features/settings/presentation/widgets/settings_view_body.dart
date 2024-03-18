@@ -1,5 +1,6 @@
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../../../../core/admob/ad_manager.dart';
 import 'custom_about_list_tile.dart';
@@ -14,10 +15,9 @@ class SettingsViewBody extends StatefulWidget {
 }
 
 class _SettingsViewBodyState extends State<SettingsViewBody> {
-
   NativeAd? nativeAd;
   bool nativeAdIsLoaded = false;
-  
+
   @override
   void initState() {
     loadNativeAd();
@@ -35,23 +35,24 @@ class _SettingsViewBodyState extends State<SettingsViewBody> {
   @override
   Widget build(BuildContext context) {
     return ListView(
+      physics: const NeverScrollableScrollPhysics(),
       children: [
         const CustomLanguageListTile(),
-        const Divider(endIndent: 15, indent: 15),
+        Divider(endIndent: 15.w, indent: 15.w),
         const CustomAboutListTile(),
-        const Divider(endIndent: 15, indent: 15),
+        Divider(endIndent: 15.w, indent: 15.w),
         const CustomSupportListTile(),
-        const Divider(endIndent: 15, indent: 15),
-        const SizedBox(height: 25),
+        Divider(endIndent: 15.w, indent: 15.w),
+        SizedBox(height: 15.h),
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 8),
           child: nativeAdIsLoaded
               ? ConstrainedBox(
-                  constraints: const BoxConstraints(
-                    minWidth: 320, // minimum recommended width
-                    minHeight: 90, // minimum recommended height
-                    maxWidth: 400,
-                    maxHeight: 200,
+                  constraints: BoxConstraints(
+                    minWidth: 320.w, // minimum recommended width
+                    minHeight: 90.h, // minimum recommended height
+                    maxWidth: 400.w,
+                    maxHeight: 200.h,
                   ),
                   child: AdWidget(ad: nativeAd!),
                 )
@@ -80,30 +81,30 @@ class _SettingsViewBodyState extends State<SettingsViewBody> {
       ),
       nativeTemplateStyle: NativeTemplateStyle(
         templateType: TemplateType.small,
-        cornerRadius: 10.0,
+        cornerRadius: 10.0.w,
         callToActionTextStyle: NativeTemplateTextStyle(
           textColor: Colors.black,
           backgroundColor: Colors.blue,
           style: NativeTemplateFontStyle.monospace,
-          size: 16.0,
+          size: 16.0.sp,
         ),
         primaryTextStyle: NativeTemplateTextStyle(
           textColor: Colors.red,
           backgroundColor: Colors.white,
           style: NativeTemplateFontStyle.italic,
-          size: 16.0,
+          size: 16.0.sp,
         ),
         secondaryTextStyle: NativeTemplateTextStyle(
           textColor: Colors.green,
           backgroundColor: Colors.black,
           style: NativeTemplateFontStyle.bold,
-          size: 16.0,
+          size: 16.0.sp,
         ),
         tertiaryTextStyle: NativeTemplateTextStyle(
           textColor: Colors.brown,
           backgroundColor: Colors.white,
           style: NativeTemplateFontStyle.normal,
-          size: 16.0,
+          size: 16.0.sp,
         ),
       ),
     )..load();

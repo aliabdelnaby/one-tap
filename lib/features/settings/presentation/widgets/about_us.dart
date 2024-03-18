@@ -1,5 +1,6 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../../../../core/admob/ad_manager.dart';
 import '../../../../core/utils/app_colors.dart';
@@ -12,7 +13,6 @@ class AboutUs extends StatefulWidget {
 }
 
 class _AboutUsState extends State<AboutUs> {
-  
   BannerAd? bannerAd;
   bool isLoaded = false;
 
@@ -74,81 +74,81 @@ class _AboutUsState extends State<AboutUs> {
                     )
                   : const SizedBox(),
             ),
-            const SizedBox(height: 15),
+            SizedBox(height: 15.h),
             Text(
               'Description'.tr(),
               style: TextStyle(
-                fontSize: 20.0,
+                fontSize: 20.0.sp,
                 fontWeight: FontWeight.bold,
                 color: AppColors.primaryColor,
               ),
             ),
-            const SizedBox(height: 10.0),
+            SizedBox(height: 10.0.h),
             Text(
               'description'.tr(),
-              style: const TextStyle(fontSize: 16.0),
+              style: TextStyle(fontSize: 16.0.sp),
             ),
-            const SizedBox(height: 20.0),
+            SizedBox(height: 20.0.h),
             Text(
               'Features'.tr(),
               style: TextStyle(
-                fontSize: 20.0,
+                fontSize: 20.0.sp,
                 fontWeight: FontWeight.bold,
                 color: AppColors.primaryColor,
               ),
             ),
-            const SizedBox(height: 10.0),
+            SizedBox(height: 10.0.h),
             Text(
               'features'.tr(),
-              style: const TextStyle(fontSize: 16.0),
+              style: TextStyle(fontSize: 16.0.sp),
             ),
-            const SizedBox(height: 20.0),
+            SizedBox(height: 20.0.h),
             Text(
               'Usage'.tr(),
               style: TextStyle(
-                fontSize: 20.0,
+                fontSize: 20.0.sp,
                 fontWeight: FontWeight.bold,
                 color: AppColors.primaryColor,
               ),
             ),
-            const SizedBox(height: 10.0),
+            SizedBox(height: 10.0.h),
             Text(
               'usage'.tr(),
-              style: const TextStyle(fontSize: 16.0),
+              style: TextStyle(fontSize: 16.0.sp),
             ),
-            const SizedBox(height: 20.0),
+            SizedBox(height: 20.0.h),
             Text(
               'Developer'.tr(),
               style: TextStyle(
-                fontSize: 20.0,
+                fontSize: 20.0.sp,
                 fontWeight: FontWeight.bold,
                 color: AppColors.primaryColor,
               ),
             ),
-            const SizedBox(height: 10.0),
+            SizedBox(height: 10.0.h),
             Text(
               'developer'.tr(),
-              style: const TextStyle(fontSize: 16.0),
+              style: TextStyle(fontSize: 16.0.sp),
             ),
-            const SizedBox(height: 20.0),
+            SizedBox(height: 20.0.h),
             Text(
               'Feedback'.tr(),
               style: TextStyle(
-                fontSize: 20.0,
+                fontSize: 20.0.sp,
                 fontWeight: FontWeight.bold,
                 color: AppColors.primaryColor,
               ),
             ),
-            const SizedBox(height: 10.0),
+            SizedBox(height: 10.0.h),
             Text(
               'feedback'.tr(),
-              style: const TextStyle(fontSize: 16.0),
+              style: TextStyle(fontSize: 16.0.sp),
             ),
-            const SizedBox(height: 20.0),
+            SizedBox(height: 20.0.h),
             Text(
               'ThankYouMessage'.tr(),
               style: TextStyle(
-                fontSize: 16.0,
+                fontSize: 16.0.sp,
                 fontWeight: FontWeight.bold,
                 color: AppColors.primaryColor,
               ),

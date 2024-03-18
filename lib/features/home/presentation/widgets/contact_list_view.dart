@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/models/contact_model.dart';
 import '../../cubits/home_cubit/home_cubit.dart';
@@ -32,7 +33,7 @@ class ContactsListView extends StatelessWidget {
           );
         } else {
           return Center(
-            heightFactor: 5,
+            heightFactor: 5.h,
             child: Text(
               "No Conversations yet".tr(),
             ),

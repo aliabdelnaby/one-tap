@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 
 import '../utils/app_colors.dart';
@@ -11,6 +12,6 @@ showToast(String msg, Color? backgroundColor) {
     timeInSecForIosWeb: 1,
     backgroundColor: backgroundColor ?? AppColors.primaryColor,
     textColor: Colors.white,
-    fontSize: 16.0,
+    fontSize: 16.0.sp,
   );
 }
