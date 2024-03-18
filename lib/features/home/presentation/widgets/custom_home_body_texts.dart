@@ -15,13 +15,13 @@ class CustomHomeBodyTexts extends StatelessWidget {
           "title".tr(),
           style: CustomTextStyle.signikastyle28,
         ),
-        const SizedBox(height: 5),
+        const SizedBox(height: 15),
         Text(
           "subTitle".tr(),
           textAlign: TextAlign.center,
           style: CustomTextStyle.signikastyle15,
         ),
-        const SizedBox(height: 5),
+        const SizedBox(height: 10),
       ],
     );
   }

@@ -87,11 +87,12 @@ class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
               text: "Open In WhatsApp".tr(),
             ),
           ),
-          const SizedBox(height: 8),
+          const SizedBox(height: 10),
           Text(
             "-Or using-".tr(),
             style: CustomTextStyle.signikastyle15.copyWith(
               color: AppColors.grey,
+              fontSize: 13,
             ),
           ),
           const SizedBox(height: 5),
