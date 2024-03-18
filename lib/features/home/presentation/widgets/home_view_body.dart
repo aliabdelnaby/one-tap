@@ -1,10 +1,7 @@
 import 'dart:async';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:one_tap/core/admob/ads_functions.dart';
-import '../../../../core/admob/ad_manager.dart';
 import 'custom_home_app_bar.dart';
 import 'enter_mobile_number_section.dart';
 import 'recent_conversation_bar.dart';
@@ -19,22 +16,16 @@ class HomeViewBody extends StatefulWidget {
 }
 
 class _HomeViewBodyState extends State<HomeViewBody> {
-  BannerAd? bannerAd;
-  bool isLoaded = false;
   Timer? timer;
 
   @override
   void initState() {
-    loadAd();
     delayedShowAd();
     super.initState();
   }
 
   @override
   void dispose() {
-    if (isLoaded) {
-      bannerAd!.dispose();
-    }
     timer?.cancel();
     super.dispose();
   }
@@ -46,18 +37,8 @@ class _HomeViewBodyState extends State<HomeViewBody> {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: ListView(
         children: [
-          const SizedBox(height: 10),
+          const SizedBox(height: 20),
           const CustomHomeAppBar(),
-          const SizedBox(height: 15),
-          Center(
-            child: isLoaded
-                ? SizedBox(
-                    height: bannerAd!.size.height.toDouble(),
-                    width: bannerAd!.size.width.toDouble(),
-                    child: AdWidget(ad: bannerAd!),
-                  )
-                : const SizedBox(),
-          ),
           const SizedBox(height: 10),
           EnterMobileNumberSection(cubit: cubit),
           const SizedBox(height: 20),
@@ -70,29 +51,12 @@ class _HomeViewBodyState extends State<HomeViewBody> {
     );
   }
 
-  void loadAd() {
-    bannerAd = BannerAd(
-      size: AdSize.banner,
-      adUnitId: AdManager.bannerHome,
-      listener: BannerAdListener(
-        onAdLoaded: (ad) {
-          setState(() {
-            isLoaded = true;
-          });
-        },
-        onAdFailedToLoad: (ad, error) {
-          ad.dispose();
-        },
-      ),
-      request: const AdRequest(),
-    )..load();
-  }
-
   void delayedShowAd() {
     timer = Timer.periodic(
       const Duration(seconds: 90),
       (timer) {
-        Ads().showAd(); // Call delayedShowAd every 90 second
+        //! Call delayedShowAd every 90 second
+        Ads().showAd();
       },
     );
   }
