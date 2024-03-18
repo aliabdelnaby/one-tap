@@ -1,6 +1,7 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
 import '../../../../core/admob/ad_manager.dart';
 import '../../../../core/admob/ads_functions.dart';
@@ -18,7 +19,6 @@ class SelectLanguageView extends StatefulWidget {
 }
 
 class _SelectLanguageViewState extends State<SelectLanguageView> {
-  
   NativeAd? nativeAd;
   bool nativeAdIsLoaded = false;
 
@@ -40,55 +40,55 @@ class _SelectLanguageViewState extends State<SelectLanguageView> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: SafeArea(
-        child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 16),
-          child: Column(
-            children: [
-              Text(
+      body: Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 16),
+        child: ListView(
+          children: [
+            Align(
+              child: Text(
                 "Choose Language".tr(),
                 style: CustomTextStyle.signikastyle28.copyWith(
                   color: AppColors.black,
                 ),
               ),
-              const SizedBox(height: 50),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                children: [
-                  CustomBtn(
-                    onPressed: () {
-                      Ads().showAd();
-                      LocalizationChecker.changeLanguageToArabic(context);
-                      customReplacementNavigate(context, "/");
-                    },
-                    text: "Arabic".tr(),
-                  ),
-                  CustomBtn(
-                    onPressed: () {
-                      Ads().showAd();
-                      LocalizationChecker.changeLanguageToEnglish(context);
-                      customReplacementNavigate(context, "/");
-                    },
-                    text: "English".tr(),
-                  ),
-                ],
-              ),
-              const SizedBox(height: 25),
-              Container(
-                child: nativeAdIsLoaded
-                    ? ConstrainedBox(
-                        constraints: const BoxConstraints(
-                          minWidth: 320, // minimum recommended width
-                          minHeight: 320, // minimum recommended height
-                          maxWidth: 400,
-                          maxHeight: 400,
-                        ),
-                        child: AdWidget(ad: nativeAd!),
-                      )
-                    : const SizedBox(),
-              ),
-            ],
-          ),
+            ),
+            const SizedBox(height: 50),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                CustomBtn(
+                  onPressed: () {
+                    Ads().showAd();
+                    LocalizationChecker.changeLanguageToArabic(context);
+                    customReplacementNavigate(context, "/");
+                  },
+                  text: "Arabic".tr(),
+                ),
+                CustomBtn(
+                  onPressed: () {
+                    Ads().showAd();
+                    LocalizationChecker.changeLanguageToEnglish(context);
+                    customReplacementNavigate(context, "/");
+                  },
+                  text: "English".tr(),
+                ),
+              ],
+            ),
+            const SizedBox(height: 25),
+            Container(
+              child: nativeAdIsLoaded
+                  ? ConstrainedBox(
+                      constraints: const BoxConstraints(
+                        minWidth: 320, // minimum recommended width
+                        minHeight: 320, // minimum recommended height
+                        maxWidth: 400,
+                        maxHeight: 400,
+                      ),
+                      child: AdWidget(ad: nativeAd!),
+                    )
+                  : const SizedBox(),
+            ),
+          ],
         ),
       ),
     );
