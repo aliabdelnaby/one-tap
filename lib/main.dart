@@ -26,7 +26,7 @@ Future<void> main() async {
         path: 'assets/translations',
         fallbackLocale: const Locale('en'),
         saveLocale: true,
-        startLocale: const Locale("ar"),
+        startLocale: const Locale("en"),
         child: const OneTapApp(),
       ),
     ),
