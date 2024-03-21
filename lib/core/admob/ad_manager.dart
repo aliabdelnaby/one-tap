@@ -1,5 +1,5 @@
 class AdManager {
-  static bool isTest = true;
+  static bool isTest = false;
   static String bannerHome = isTest
       ? "ca-app-pub-3940256099942544/6300978111"
       : "ca-app-pub-8575403121937936/4313853714";
