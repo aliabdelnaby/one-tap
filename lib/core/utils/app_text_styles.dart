@@ -25,6 +25,10 @@ abstract class CustomTextStyle {
     fontSize: 16.sp,
     color: AppColors.white,
   );
+  static final signikaBtnstyle17 = TextStyle(
+    fontSize: 17.sp,
+    color: AppColors.primaryColor,
+  );
   static final signikaTextFieldstyle = TextStyle(
     color: AppColors.grey,
   );
@@ -35,5 +39,9 @@ abstract class CustomTextStyle {
   static final signikaOptionstyle14 = TextStyle(
     color: AppColors.blue,
     fontSize: 14.sp,
+  );
+  static final signikastyle15black54 = TextStyle(
+    color: Colors.black54,
+    fontSize: 15.sp,
   );
 }
