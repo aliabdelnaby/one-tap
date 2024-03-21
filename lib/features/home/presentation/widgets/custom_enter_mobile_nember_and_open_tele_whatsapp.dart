@@ -72,7 +72,7 @@ class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
             message: "Open In WhatsApp".tr(),
             child: CustomBtn(
               height: MediaQuery.of(context).size.width * .15,
-              width: MediaQuery.of(context).size.height * .25,
+              width: MediaQuery.of(context).size.height * .3,
               onPressed: () {
                 if (cubit.phoneFormKey.currentState!.validate()) {
                   cubit.phoneFormKey.currentState!.save();
