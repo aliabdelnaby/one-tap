@@ -16,7 +16,6 @@ class OneTapApp extends StatelessWidget {
       splitScreenMode: true,
       builder: (_, child) {
         return MaterialApp.router(
-          // locale: DevicePreview.locale(context),
           builder: DevicePreview.appBuilder,
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
