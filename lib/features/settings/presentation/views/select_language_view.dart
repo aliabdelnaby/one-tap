@@ -3,10 +3,10 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
+import 'package:one_tap/core/functions/navigation.dart';
 import '../../../../core/admob/ad_manager.dart';
 import '../../../../core/admob/ads_functions.dart';
 import '../../../../core/functions/localization.dart';
-import '../../../../core/functions/navigation.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_text_styles.dart';
 import '../../../home/presentation/widgets/custom_btn.dart';
@@ -62,7 +62,8 @@ class _SelectLanguageViewState extends State<SelectLanguageView> {
                   onPressed: () {
                     Ads().showAd();
                     LocalizationChecker.changeLanguageToArabic(context);
-                    customReplacementNavigate(context, "/");
+                    customReplacementNavigate(context, "/homeView");
+                    // context.go("/homeView");
                   },
                   text: "Arabic".tr(),
                 ),
@@ -72,7 +73,8 @@ class _SelectLanguageViewState extends State<SelectLanguageView> {
                   onPressed: () {
                     Ads().showAd();
                     LocalizationChecker.changeLanguageToEnglish(context);
-                    customReplacementNavigate(context, "/");
+                    customReplacementNavigate(context, "/homeView");
+                    // context.go("/homeView");
                   },
                   text: "English".tr(),
                 ),
