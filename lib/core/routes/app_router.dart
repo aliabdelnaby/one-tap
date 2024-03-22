@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:one_tap/features/onBoarding/presentation/views/on_boarding_view.dart';
+import 'package:one_tap/splash.dart';
 import '../../features/home/cubits/home_cubit/home_cubit.dart';
 import '../../features/home/presentation/views/home_view.dart';
 import '../../features/settings/presentation/views/select_language_view.dart';
@@ -13,6 +14,10 @@ final GoRouter router = GoRouter(
   routes: [
     GoRoute(
       path: '/',
+      builder: ((context, state) => const SplashView()),
+    ),
+    GoRoute(
+      path: '/onBoardingView',
       builder: ((context, state) => const OnBoardnigView()),
     ),
     GoRoute(
