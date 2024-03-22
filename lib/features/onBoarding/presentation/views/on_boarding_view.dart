@@ -4,6 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 import 'package:one_tap/core/cache/cache_helper.dart';
 import 'package:one_tap/core/functions/navigation.dart';
+import 'package:one_tap/core/services/service_locator.dart';
 import 'package:one_tap/core/utils/app_colors.dart';
 import 'package:one_tap/core/utils/app_text_styles.dart';
 import 'package:one_tap/features/onBoarding/presentation/widgets/pages_list.dart';
@@ -18,7 +19,8 @@ class OnBoardnigView extends StatelessWidget {
         body: IntroductionScreen(
           pages: pages,
           onDone: () {
-            CacheHelper().saveData(key: "isOnBoardingVisited", value: true);
+            getIt<CacheHelper>()
+                .saveData(key: "isOnBoardingVisited", value: true);
             customReplacementNavigate(context, "/homeView");
           },
           scrollPhysics: const ClampingScrollPhysics(),
@@ -42,7 +44,7 @@ class OnBoardnigView extends StatelessWidget {
       ),
     );
   }
-  
+
   //! method to customize the dots style
   DotsDecorator getDotsDecorator() {
     return DotsDecorator(

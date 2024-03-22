@@ -52,11 +52,11 @@ class _HomeViewBodyState extends State<HomeViewBody> {
     );
   }
 
+  //! Method ShowAd every 90 second
   void delayedShowAd() {
     timer = Timer.periodic(
       const Duration(seconds: 90),
       (timer) {
-        //! Call delayedShowAd every 90 second
         Ads().showAd();
       },
     );

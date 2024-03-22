@@ -63,7 +63,6 @@ class _SelectLanguageViewState extends State<SelectLanguageView> {
                     Ads().showAd();
                     LocalizationChecker.changeLanguageToArabic(context);
                     customReplacementNavigate(context, "/homeView");
-                    // context.go("/homeView");
                   },
                   text: "Arabic".tr(),
                 ),
@@ -74,7 +73,6 @@ class _SelectLanguageViewState extends State<SelectLanguageView> {
                     Ads().showAd();
                     LocalizationChecker.changeLanguageToEnglish(context);
                     customReplacementNavigate(context, "/homeView");
-                    // context.go("/homeView");
                   },
                   text: "English".tr(),
                 ),

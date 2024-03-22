@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_text_styles.dart';
 
@@ -23,9 +22,7 @@ class CustomBtn extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       height: height,
-      //  ?? MediaQuery.of(context).size.height * .065,
       width: width,
-      //  ?? MediaQuery.of(context).size.width * .5,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ElevatedButton.styleFrom(

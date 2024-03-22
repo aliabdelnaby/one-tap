@@ -17,6 +17,11 @@ abstract class CustomTextStyle {
     color: AppColors.primaryColor,
     fontWeight: FontWeight.bold,
   );
+    static final signikastyle24 = TextStyle(
+    fontSize: 24.sp,
+    color: AppColors.primaryColor,
+    fontWeight: FontWeight.bold,
+  );
   static final signikastyle15 = TextStyle(
     fontSize: 15.sp,
     color: AppColors.black,

@@ -47,7 +47,8 @@ List<PageViewModel>? pages = [
       pageColor: Colors.white,
       bodyPadding: EdgeInsets.only(top: 8.h, left: 20.w, right: 20.w),
       titlePadding: EdgeInsets.only(top: 50.h),
-      titleTextStyle: CustomTextStyle.signikastyle20,
+      titleTextStyle: CustomTextStyle.signikastyle24,
       bodyTextStyle: CustomTextStyle.signikastyle15black54,
     );
   }
+  

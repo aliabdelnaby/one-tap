@@ -1,4 +1,5 @@
 import 'package:one_tap/core/cache/cache_helper.dart';
+import 'package:one_tap/core/services/service_locator.dart';
 
 checkIsOnBoardingVisited() =>
-    CacheHelper().getData(key: "isOnBoardingVisited") ?? false;
+    getIt<CacheHelper>().getData(key: "isOnBoardingVisited") ?? false;
