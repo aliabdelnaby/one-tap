@@ -1,5 +1,4 @@
 import 'package:hive_flutter/hive_flutter.dart';
-
 part 'contact_model.g.dart';
 
 @HiveType(typeId: 0)

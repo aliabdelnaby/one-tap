@@ -3,7 +3,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:one_tap/core/functions/navigation.dart';
+import '../../../../core/functions/navigation.dart';
 import '../../../../core/admob/ad_manager.dart';
 import '../../../../core/admob/ads_functions.dart';
 import '../../../../core/functions/localization.dart';

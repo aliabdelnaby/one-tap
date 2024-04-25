@@ -2,9 +2,9 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:one_tap/core/utils/app_text_styles.dart';
-import 'package:one_tap/core/utils/assets.dart';
-import 'package:one_tap/features/onBoarding/presentation/widgets/onboarding_image.dart';
+import '../../../../core/utils/app_text_styles.dart';
+import '../../../../core/utils/assets.dart';
+import 'onboarding_image.dart';
 
 List<PageViewModel>? pages = [
   PageViewModel(

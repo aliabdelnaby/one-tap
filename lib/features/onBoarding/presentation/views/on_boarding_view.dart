@@ -2,12 +2,12 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:one_tap/core/cache/cache_helper.dart';
-import 'package:one_tap/core/functions/navigation.dart';
-import 'package:one_tap/core/services/service_locator.dart';
-import 'package:one_tap/core/utils/app_colors.dart';
-import 'package:one_tap/core/utils/app_text_styles.dart';
-import 'package:one_tap/features/onBoarding/presentation/widgets/pages_list.dart';
+import '../../../../core/cache/cache_helper.dart';
+import '../../../../core/functions/navigation.dart';
+import '../../../../core/services/service_locator.dart';
+import '../../../../core/utils/app_colors.dart';
+import '../../../../core/utils/app_text_styles.dart';
+import '../widgets/pages_list.dart';
 
 class OnBoardnigView extends StatelessWidget {
   const OnBoardnigView({super.key});
