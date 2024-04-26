@@ -1,16 +1,23 @@
-# one_tap
 
-A new Flutter project.
+# One Tap 👆🏻
 
-## Getting Started
+## Description 📜
 
-This project is a starting point for a Flutter application.
+This application is a handy tool for opening WhatsApp or Telegram without the need to save the contact first. It streamlines the process of initiating conversations with new or unknown numbers by providing a direct pathway to WhatsApp or Telegram messaging. This is an easy way to connect with people without saving the contact.
 
-A few resources to get you started if this is your first Flutter project:
+## Features ✨
+- **Quick Chat:** Easily open WhatsApp or Telegram directly from within the app, With one click you can start a conversation.
+- **Efficient Communication:** Facilitates quick communication with contacts through WhatsApp.
+- **Save contacts:** Every contact you open will be temporarily stored in the app for easy reference.
+- **User-Friendly Interface:** Simple and intuitive design for smooth navigation.
+- **Save your time**: This is an easy way to connect with people without saving the contact.
+- **Privacy of your messages:** All your conversations are confidential, and the application does not save any messages or contacts.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Design and Development Technologies 💻
+- **MVVM:** Follows the MVVM (Model-View-ViewModel) design pattern for organized code.
+- **Bloc:** Efficiently manages state using the Bloc package.
+- **Route:** Simplifies navigation with go_router package.
+- **Responsive UI:** Ensures a responsive user interface for various screen sizes.
+- **Local DataBase:** Efficiently stores Contacts with Hive package and Shared Preferences package in visiting Onboarding screens.
+- **Localization:** Efficiently switch between Arabic and English using the easy_localization package.
+- **Ads:** Applying advertisements within the application by linking with Admob.
