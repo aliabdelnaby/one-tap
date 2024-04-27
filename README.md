@@ -1,3 +1,5 @@
+![one_tap_en](https://github.com/aliabdelnaby/one-tap/assets/70640625/d64e2577-20a5-470f-b8e5-4301db8a3155)
+![one_tap_ar](https://github.com/aliabdelnaby/one-tap/assets/70640625/19e27c03-42c4-46cc-8c23-98bca1e70d3e)
 
 # One Tap 👆🏻
 
