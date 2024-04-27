@@ -1,5 +1,8 @@
-![one_tap_en](https://github.com/aliabdelnaby/one-tap/assets/70640625/d64e2577-20a5-470f-b8e5-4301db8a3155)
-![one_tap_ar](https://github.com/aliabdelnaby/one-tap/assets/70640625/19e27c03-42c4-46cc-8c23-98bca1e70d3e)
+![one_tap_onBoarding](https://github.com/aliabdelnaby/one-tap/assets/70640625/b126df1f-4df0-4351-b288-95f150e9430c)
+
+![one_tap_en](https://github.com/aliabdelnaby/one-tap/assets/70640625/1258df42-7986-42c1-8977-1d712cedae40)
+
+![one_tap_ar](https://github.com/aliabdelnaby/one-tap/assets/70640625/9c0dfc71-687e-43cb-a234-37d28ddd0635)
 
 # One Tap 👆🏻
 
@@ -9,7 +12,7 @@ This application is a handy tool for opening WhatsApp or Telegram without the ne
 
 ## Features ✨
 - **Quick Chat:** Easily open WhatsApp or Telegram directly from within the app, With one click you can start a conversation.
-- **Efficient Communication:** Facilitates quick communication with contacts through WhatsApp.
+- **Efficient Communication:** Facilitates quick communication with contacts through WhatsApp or Telegram.
 - **Save contacts:** Every contact you open will be temporarily stored in the app for easy reference.
 - **User-Friendly Interface:** Simple and intuitive design for smooth navigation.
 - **Save your time**: This is an easy way to connect with people without saving the contact.
