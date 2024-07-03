@@ -26,3 +26,4 @@ This application is a handy tool for opening WhatsApp or Telegram without the ne
 - **Local DataBase:** Efficiently stores Contacts with Hive package and Shared Preferences package in visiting Onboarding screens.
 - **Localization:** Efficiently switch between Arabic and English using the easy_localization package.
 - **Ads:** Applying advertisements within the application by linking with Admob.
+ ## You can download and try it from here:  https://bit.ly/3Uiw8Af
