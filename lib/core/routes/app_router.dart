@@ -5,9 +5,6 @@ import '../../features/onBoarding/presentation/function/check_is_onborading_visi
 import '../../features/onBoarding/presentation/views/on_boarding_view.dart';
 import '../../features/home/cubits/home_cubit/home_cubit.dart';
 import '../../features/home/presentation/views/home_view.dart';
-import '../../features/settings/presentation/views/select_language_view.dart';
-import '../../features/settings/presentation/views/settings_view.dart';
-import '../../features/settings/settings_cubit/settings_cubit.dart';
 
 final GoRouter router = GoRouter(
   initialLocation: checkIsOnBoardingVisited() ? "/homeView" : "/",
@@ -27,45 +24,6 @@ final GoRouter router = GoRouter(
               child: HomeView(),
             ),
           )),
-    ),
-    GoRoute(
-      path: '/settingsView',
-      pageBuilder: (context, state) {
-        return CustomTransitionPage(
-          key: state.pageKey,
-          child: BlocProvider(
-            create: (context) => SettingsCubit(),
-            child: const SettingsView(),
-          ),
-          transitionsBuilder: (context, animation, secondaryAnimation, child) {
-            return SlideTransition(
-              position: Tween<Offset>(
-                begin: const Offset(2.0, 0.0), // Start position (right)
-                end: Offset.zero, // End position (left)
-              ).animate(animation),
-              child: child,
-            );
-          },
-        );
-      },
-    ),
-    GoRoute(
-      path: '/selectLanguageView',
-      pageBuilder: (context, state) {
-        return CustomTransitionPage(
-          key: state.pageKey,
-          child: const SelectLanguageView(),
-          transitionsBuilder: (context, animation, secondaryAnimation, child) {
-            return SlideTransition(
-              position: Tween<Offset>(
-                begin: const Offset(2.0, 0.0), // Start position (right)
-                end: Offset.zero, // End position (left)
-              ).animate(animation),
-              child: child,
-            );
-          },
-        );
-      },
     ),
   ],
 );
