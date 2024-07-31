@@ -1,8 +1,6 @@
 ![one_tap_onBoarding](https://github.com/aliabdelnaby/one-tap/assets/70640625/b126df1f-4df0-4351-b288-95f150e9430c)
+![9a794058-4ee7-4c7e-9087-eaf2aee3a2cf](https://github.com/user-attachments/assets/ee62966a-8b1f-464c-b6bd-37ebb8536a9d)
 
-![one_tap_en](https://github.com/aliabdelnaby/one-tap/assets/70640625/1258df42-7986-42c1-8977-1d712cedae40)
-
-![one_tap_ar](https://github.com/aliabdelnaby/one-tap/assets/70640625/9c0dfc71-687e-43cb-a234-37d28ddd0635)
 
 # One Tap 👆🏻
 
