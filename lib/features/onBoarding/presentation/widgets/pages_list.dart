@@ -18,7 +18,7 @@ List<PageViewModel>? pages = [
   PageViewModel(
     title: 'titleOnboarding2'.tr(),
     body: 'bodyOnboarding2'.tr(),
-     image: const OnBoradingImage(
+    image: const OnBoradingImage(
       imagePath: Assets.imagesOnboarding2,
     ),
     decoration: getPageDecoration(),
@@ -26,7 +26,7 @@ List<PageViewModel>? pages = [
   PageViewModel(
     title: 'titleOnboarding3'.tr(),
     body: 'bodyOnboarding3'.tr(),
-     image: const OnBoradingImage(
+    image: const OnBoradingImage(
       imagePath: Assets.imagesOnboarding3,
     ),
     decoration: getPageDecoration(),
@@ -34,21 +34,20 @@ List<PageViewModel>? pages = [
   PageViewModel(
     title: 'titleOnboarding4'.tr(),
     body: 'bodyOnboarding4'.tr(),
- image: const OnBoradingImage(
+    image: const OnBoradingImage(
       imagePath: Assets.imagesOnboarding4,
     ),
     decoration: getPageDecoration(),
   ),
 ];
 
-  PageDecoration getPageDecoration() {
-    return PageDecoration(
-      imagePadding: EdgeInsets.only(top: 120.h),
-      pageColor: Colors.white,
-      bodyPadding: EdgeInsets.only(top: 8.h, left: 20.w, right: 20.w),
-      titlePadding: EdgeInsets.only(top: 50.h),
-      titleTextStyle: CustomTextStyle.signikastyle24,
-      bodyTextStyle: CustomTextStyle.signikastyle15black54,
-    );
-  }
-  
+PageDecoration getPageDecoration() {
+  return PageDecoration(
+    imagePadding: EdgeInsets.only(top: 120.h),
+    pageColor: Colors.white,
+    bodyPadding: EdgeInsets.only(top: 8.h, left: 20.w, right: 20.w),
+    titlePadding: EdgeInsets.only(top: 50.h),
+    titleTextStyle: CustomTextStyle.signikastyle24,
+    bodyTextStyle: CustomTextStyle.signikastyle15black54,
+  );
+}

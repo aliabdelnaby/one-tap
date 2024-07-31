@@ -16,6 +16,7 @@ class OnBoardnigView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
+        backgroundColor: AppColors.white,
         body: IntroductionScreen(
           pages: pages,
           onDone: () {
@@ -40,6 +41,7 @@ class OnBoardnigView extends StatelessWidget {
             style: CustomTextStyle.signikaBtnstyle17,
           ),
           dotsDecorator: getDotsDecorator(),
+          globalBackgroundColor: AppColors.white,
         ),
       ),
     );
@@ -52,9 +54,9 @@ class OnBoardnigView extends StatelessWidget {
       activeColor: AppColors.primaryColor,
       color: Colors.grey,
       activeSize: Size(10.sp, 10.sp),
-      activeShape: const RoundedRectangleBorder(
+      activeShape: RoundedRectangleBorder(
         borderRadius: BorderRadius.all(
-          Radius.circular(25.0),
+          Radius.circular(25.0.r),
         ),
       ),
     );
