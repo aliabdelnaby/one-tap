@@ -20,6 +20,7 @@ class OneTapApp extends StatelessWidget {
           theme: ThemeData(
             fontFamily:
                 context.locale.languageCode == 'ar' ? "Rubik" : "Signika",
+            scaffoldBackgroundColor: Colors.white,
           ),
           localizationsDelegates: context.localizationDelegates,
           supportedLocales: context.supportedLocales,

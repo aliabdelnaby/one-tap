@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import '../../cubits/home_cubit/home_cubit.dart';
 import '../widgets/home_view_body.dart';
 
 class HomeView extends StatelessWidget {
@@ -10,7 +8,9 @@ class HomeView extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        key: BlocProvider.of<HomeCubit>(context).scaffoldHomekey,
+        appBar: AppBar(
+          backgroundColor: Colors.white,
+        ),
         body: const HomeViewBody(),
       ),
     );

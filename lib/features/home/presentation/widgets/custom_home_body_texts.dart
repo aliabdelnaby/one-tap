@@ -20,7 +20,9 @@ class CustomHomeBodyTexts extends StatelessWidget {
         Text(
           "subTitle".tr(),
           textAlign: TextAlign.center,
-          style: CustomTextStyle.signikastyle15,
+          style: CustomTextStyle.signikastyle15.copyWith(
+            color: Colors.black54,
+          ),
         ),
         SizedBox(height: 10.h),
       ],

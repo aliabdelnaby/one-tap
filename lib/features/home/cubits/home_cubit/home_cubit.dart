@@ -15,7 +15,6 @@ class HomeCubit extends Cubit<HomeState> {
   HomeCubit() : super(HomeInitial());
 
   GlobalKey<FormState> phoneFormKey = GlobalKey();
-  GlobalKey<ScaffoldState> scaffoldHomekey = GlobalKey();
   TextEditingController phoneController = TextEditingController();
   String? phone;
   AutovalidateMode autovalidateMode = AutovalidateMode.disabled;
@@ -131,5 +130,4 @@ class HomeCubit extends Cubit<HomeState> {
       );
     });
   }
-
 }

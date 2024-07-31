@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'custom_home_app_bar.dart';
 import 'enter_mobile_number_section.dart';
 import 'recent_conversation_bar.dart';
 import '../../cubits/home_cubit/home_cubit.dart';
@@ -17,9 +16,6 @@ class HomeViewBody extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: ListView(
         children: [
-          SizedBox(height: 20.h),
-          const CustomHomeAppBar(),
-          SizedBox(height: 10.h),
           EnterMobileNumberSection(cubit: cubit),
           SizedBox(height: 20.h),
           const Divider(),

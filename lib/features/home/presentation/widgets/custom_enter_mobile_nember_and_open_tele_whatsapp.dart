@@ -28,7 +28,7 @@ class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
       autovalidateMode: cubit.autovalidateMode,
       child: Column(
         children: [
-          const SizedBox(height: 24),
+          SizedBox(height: 24.h),
           const CustomHomeBodyTexts(),
           Padding(
             padding: const EdgeInsets.symmetric(horizontal: 50),
@@ -43,9 +43,9 @@ class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
                     cubit.phoneController.clear();
                   });
                 },
-                child: Icon(
+                child: const Icon(
                   Icons.clear,
-                  size: 18.sp,
+                  size: 18,
                 ),
               ),
             ),
@@ -57,7 +57,7 @@ class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
             },
             icon: Icon(
               FontAwesomeIcons.paste,
-              size: 16.sp,
+              size: 16,
               color: AppColors.primaryColor,
             ),
             label: Text(
@@ -71,8 +71,6 @@ class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
           Tooltip(
             message: "Open In WhatsApp".tr(),
             child: CustomBtn(
-              height: MediaQuery.of(context).size.width * .15,
-              width: MediaQuery.of(context).size.height * .3,
               onPressed: () {
                 if (cubit.phoneFormKey.currentState!.validate()) {
                   cubit.phoneFormKey.currentState!.save();

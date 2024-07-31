@@ -19,6 +19,7 @@ class SettingsView extends StatelessWidget {
 
   AppBar _buildAppBar(BuildContext context) {
     return AppBar(
+      backgroundColor: Colors.white,
       title: Text(
         "appName".tr(),
         style: CustomTextStyle.signikastyle20,
