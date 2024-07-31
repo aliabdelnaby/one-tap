@@ -30,44 +30,47 @@ class _EnterMobileNumberWidgetsState extends State<EnterMobileNumberWidgets> {
         children: [
           SizedBox(height: 24.h),
           const CustomHomeBodyTexts(),
-          Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 50),
-            child: CustomTextFormField(
-              controller: cubit.phoneController,
-              onSaved: (value) {
-                cubit.phone = value;
-              },
-              suffixIcon: GestureDetector(
-                onTap: () {
-                  setState(() {
-                    cubit.phoneController.clear();
-                  });
-                },
-                child: const Icon(
-                  Icons.clear,
-                  size: 18,
+          SizedBox(height: 20.h),
+          Row(
+            children: [
+              Expanded(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 50),
+                  child: CustomTextFormField(
+                    controller: cubit.phoneController,
+                    onSaved: (value) {
+                      cubit.phone = value;
+                    },
+                    suffixIcon: GestureDetector(
+                      onTap: () {
+                        setState(() {
+                          cubit.phoneController.clear();
+                        });
+                      },
+                      child: const Icon(
+                        Icons.clear,
+                        size: 18,
+                      ),
+                    ),
+                  ),
                 ),
               ),
-            ),
-          ),
-          SizedBox(height: 5.h),
-          TextButton.icon(
-            onPressed: () {
-              cubit.checkClipboard();
-            },
-            icon: Icon(
-              FontAwesomeIcons.paste,
-              size: 16,
-              color: AppColors.primaryColor,
-            ),
-            label: Text(
-              "Paste".tr(),
-              style: CustomTextStyle.signikaOptionstyle14.copyWith(
-                color: AppColors.primaryColor,
+              Tooltip(
+                message: 'Paste'.tr(),
+                child: IconButton(
+                  onPressed: () {
+                    cubit.checkClipboard();
+                  },
+                  icon: Icon(
+                    FontAwesomeIcons.paste,
+                    size: 16,
+                    color: AppColors.primaryColor,
+                  ),
+                ),
               ),
-            ),
+            ],
           ),
-          SizedBox(height: 5.h),
+          SizedBox(height: 15.h),
           Tooltip(
             message: "Open In WhatsApp".tr(),
             child: CustomBtn(

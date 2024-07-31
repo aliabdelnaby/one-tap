@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
-import 'package:one_tap/splash.dart';
+import '../../features/splash/splash.dart';
 import '../../features/onBoarding/presentation/function/check_is_onborading_visited.dart';
 import '../../features/onBoarding/presentation/views/on_boarding_view.dart';
 import '../../features/home/cubits/home_cubit/home_cubit.dart';

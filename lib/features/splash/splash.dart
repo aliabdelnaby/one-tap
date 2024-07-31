@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:one_tap/core/utils/assets.dart';
+import '../../core/utils/assets.dart';
 
 class SplashLoadingView extends StatefulWidget {
   const SplashLoadingView({super.key});

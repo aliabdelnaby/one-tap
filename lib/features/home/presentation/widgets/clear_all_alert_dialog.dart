@@ -1,8 +1,8 @@
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:go_router/go_router.dart';
 import '../../../../core/functions/custom_snack_bar.dart';
-import '../../../../core/functions/navigation.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/utils/app_text_styles.dart';
 import '../../cubits/home_cubit/home_cubit.dart';
@@ -31,13 +31,13 @@ class CustomAlertDialogClearAll extends StatelessWidget {
       actions: [
         GestureDetector(
           onTap: () {
-            customPopNavigate(context);
+            context.pop();
           },
           child: Text(
             "Close".tr(),
           ),
         ),
-         SizedBox(
+        SizedBox(
           width: 25.w,
         ),
         GestureDetector(
@@ -48,10 +48,10 @@ class CustomAlertDialogClearAll extends StatelessWidget {
                 "There are no contacts to delete".tr(),
                 AppColors.primaryColor,
               );
-              customPopNavigate(context);
+              context.pop();
             } else {
               cubit.deleteAllData();
-              customPopNavigate(context);
+              context.pop();
             }
           },
           child: Text(

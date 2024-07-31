@@ -17,37 +17,34 @@ class CustomTextFormField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(top: 20),
-      child: TextFormField(
-        onSaved: onSaved,
-        cursorColor: AppColors.primaryColor,
-        validator: (value) {
-          if (value?.isEmpty ?? true) {
-            return "This field is required".tr();
-          } else if (value!.length <= 10) {
-            return "Enter a valid number".tr();
-          } else if (!value.startsWith("+")) {
-            return 'Write the country code such as (+20)'.tr();
-          } else if (value.contains(' ')) {
-            return "Please delete the spaces in the phone number".tr();
-          } else {
-            return null;
-          }
-        },
-        controller: controller,
-        keyboardType: TextInputType.number,
-        decoration: InputDecoration(
-          suffixIcon: suffixIcon,
-          enabledBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: AppColors.primaryColor),
-          ),
-          focusedBorder: UnderlineInputBorder(
-            borderSide: BorderSide(color: AppColors.primaryColor),
-          ),
-          hintText: 'ex: +20 1234567890',
-          hintStyle: CustomTextStyle.signikaTextFieldstyle,
+    return TextFormField(
+      onSaved: onSaved,
+      cursorColor: AppColors.primaryColor,
+      validator: (value) {
+        if (value?.isEmpty ?? true) {
+          return "Please enter the phone number".tr();
+        } else if (value!.length <= 10) {
+          return "Enter a valid number".tr();
+        } else if (!value.startsWith("+")) {
+          return 'Write the country code such as (+20)'.tr();
+        } else if (value.contains(' ')) {
+          return "Please delete the spaces in the phone number".tr();
+        } else {
+          return null;
+        }
+      },
+      controller: controller,
+      keyboardType: TextInputType.number,
+      decoration: InputDecoration(
+        suffixIcon: suffixIcon,
+        enabledBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: AppColors.primaryColor),
         ),
+        focusedBorder: UnderlineInputBorder(
+          borderSide: BorderSide(color: AppColors.primaryColor),
+        ),
+        hintText: 'ex: +20 12XXXXXXXX',
+        hintStyle: CustomTextStyle.signikaTextFieldstyle,
       ),
     );
   }
