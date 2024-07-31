@@ -51,3 +51,13 @@ final class DeleteAllContactsFailure extends HomeState {
 
   DeleteAllContactsFailure({required this.errMessage});
 }
+
+final class ChangeLanguageLoading extends HomeState {}
+
+final class ChangeLanguageSuccess extends HomeState {}
+
+final class ChangeLanguageFailure extends HomeState {
+  final String errMessage;
+
+  ChangeLanguageFailure({required this.errMessage});
+}

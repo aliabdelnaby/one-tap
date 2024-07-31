@@ -3,6 +3,7 @@ import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:one_tap/core/functions/custom_snack_bar.dart';
 import '../../../../core/utils/app_colors.dart';
 import '../../../../core/constants/constants.dart';
 import '../../../../core/models/contact_model.dart';
@@ -129,5 +130,47 @@ class HomeCubit extends Cubit<HomeState> {
         text: text.replaceAll(' ', ''), // Remove spaces
       );
     });
+  }
+
+  Future<void> changeLanguageToEnglish(BuildContext context) async {
+    try {
+      emit(ChangeLanguageLoading());
+      Locale? currentLocal = EasyLocalization.of(context)!.currentLocale;
+      if (currentLocal != const Locale("en")) {
+        customSnackBar(
+          context,
+          "The language has been changed",
+          AppColors.green,
+        );
+        await EasyLocalization.of(context)!.setLocale(const Locale("en"));
+        emit(ChangeLanguageSuccess());
+      } else {
+        emit(ChangeLanguageFailure(
+            errMessage: "You are on the same language".tr()));
+      }
+    } catch (e) {
+      emit(ChangeLanguageFailure(errMessage: e.toString()));
+    }
+  }
+
+  Future<void> changeLanguageToArabic(BuildContext context) async {
+    try {
+      emit(ChangeLanguageLoading());
+      Locale? currentLocal = EasyLocalization.of(context)!.currentLocale;
+      if (currentLocal != const Locale("ar")) {
+        customSnackBar(
+          context,
+          "تم تغيير اللغة",
+          AppColors.green,
+        );
+        await EasyLocalization.of(context)!.setLocale(const Locale("ar"));
+        emit(ChangeLanguageSuccess());
+      } else {
+        emit(ChangeLanguageFailure(
+            errMessage: "You are on the same language".tr()));
+      }
+    } catch (e) {
+      emit(ChangeLanguageFailure(errMessage: e.toString()));
+    }
   }
 }
